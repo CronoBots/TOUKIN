@@ -1,0 +1,20 @@
+<svg width="360" height="110" viewBox="0 0 360 110" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Toukin — Collectif santé">
+  <defs>
+    <linearGradient id="l-beak" x1="58" y1="34" x2="116" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6A23B"/><stop offset="0.55" stop-color="#F47A3A"/><stop offset="1" stop-color="#E5563B"/>
+    </linearGradient>
+    <linearGradient id="l-body" x1="20" y1="20" x2="86" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#125B50"/><stop offset="1" stop-color="#0B3A33"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(-5,-5)">
+    <circle cx="60" cy="60" r="50" stroke="#1B6A5E" stroke-opacity="0.18" stroke-width="2"/>
+    <path d="M64 96c-22 0-40-18-40-40 0-13 6-24 16-31-3 9-3 18 1 27 6 13 18 21 33 22 4 0 8-1 12-2-5 14-18 24-22 24z" fill="url(#l-body)"/>
+    <path d="M41 52c0-11 9-20 20-20 7 0 13 3 17 8-6-2-13-1-19 2-9 5-15 13-16 23-1-4-2-8-2-13z" fill="#1A7A6B" fill-opacity="0.55"/>
+    <path d="M62 41c8-5 19-7 30-4 6 2 11 5 15 10-12-1-22 1-30 6-7 4-12 10-15 17-3-7-7-12-13-15 3-9 7-16 13-20z" fill="url(#l-beak)"/>
+    <circle cx="56" cy="48" r="3.4" fill="#0B3A33"/>
+    <circle cx="57.2" cy="46.8" r="1.1" fill="#EAF4EE"/>
+  </g>
+  <text x="120" y="58" font-family="'Fraunces', Georgia, serif" font-size="44" font-weight="600" letter-spacing="0.5" fill="#0B3A33">Toukin</text>
+  <text x="122" y="82" font-family="'Manrope', Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="3.5" fill="#0F766E">COLLECTIF SANTÉ</text>
+</svg>
