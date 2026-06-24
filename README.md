@@ -32,16 +32,20 @@ python3 -m http.server 8000
 
 ## Identité de marque
 
-Le nom **Toukin** évoque le **toucan** : le logo est un toucan stylisé au bec
-orange, décliné dans une palette « canopée » premium.
+Le logo officiel est un **toucan géométrique** inscrit dans un cercle
+(quadrants noir / ambre / blanc, avec l'œil). Tout le thème en découle.
 
 | Rôle | Couleur |
 |------|---------|
-| Vert canopée (primaire) | `#0B3A33` |
-| Teal | `#0F766E` |
-| Bec toucan (accent) | `#F47A3A` → `#E5563B` |
-| Ambre | `#F6A23B` |
-| Crème / sable | `#FAF7F0` / `#F1E9D8` |
+| Noir logo (primaire) | `#1C1B1A` |
+| Ambre logo (accent) | `#F5A623` |
+| Ambre profond (dégradés) | `#E2941A` |
+| Ambre lisible (texte) | `#D88E15` |
+| Blanc cassé (fond) | `#FBFAF7` |
+| Gris chaud clair (sections) | `#F3F0EA` |
+
+> Logos : `assets/logo.svg` (texte foncé, fonds clairs), `assets/logo-light.svg`
+> (texte clair, fonds foncés), `assets/logo-mark.svg` (icône seule / favicon).
 
 Typographie : **Fraunces** (titres, serif) + **Manrope** (texte, sans-serif).
 

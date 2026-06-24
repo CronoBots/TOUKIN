@@ -1,14 +1,14 @@
 <svg width="330" height="96" viewBox="0 0 330 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Toukin — Collectif santé">
   <defs>
-    <clipPath id="lw-circle"><circle cx="48" cy="48" r="40"/></clipPath>
+    <clipPath id="ll-circle"><circle cx="48" cy="48" r="40"/></clipPath>
   </defs>
-  <g clip-path="url(#lw-circle)">
+  <g clip-path="url(#ll-circle)">
     <rect x="8" y="8" width="80" height="80" fill="#FFFFFF"/>
     <rect x="8" y="48" width="40" height="40" fill="#1C1B1A"/>
     <rect x="48" y="8" width="40" height="40" fill="#1C1B1A"/>
     <rect x="48" y="8" width="29.6" height="40" fill="#F5A623"/>
     <circle cx="32" cy="29.6" r="5.9" fill="#1C1B1A"/>
   </g>
-  <text x="104" y="50" font-family="'Fraunces', Georgia, serif" font-size="40" font-weight="600" letter-spacing="0.5" fill="#1C1B1A">Toukin</text>
-  <text x="106" y="72" font-family="'Manrope', Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.4" fill="#C08416">COLLECTIF SANTÉ</text>
+  <text x="104" y="50" font-family="'Fraunces', Georgia, serif" font-size="40" font-weight="600" letter-spacing="0.5" fill="#FBFAF7">Toukin</text>
+  <text x="106" y="72" font-family="'Manrope', Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.4" fill="#F5A623">COLLECTIF SANTÉ</text>
 </svg>
