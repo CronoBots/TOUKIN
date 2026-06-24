@@ -1,14 +1,14 @@
-<svg width="330" height="96" viewBox="0 0 330 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Toukin — Collectif santé">
-  <defs>
-    <clipPath id="ll-circle"><circle cx="48" cy="48" r="40"/></clipPath>
-  </defs>
-  <g clip-path="url(#ll-circle)">
-    <rect x="8" y="8" width="80" height="80" fill="#FFFFFF"/>
-    <rect x="8" y="48" width="40" height="40" fill="#1C1B1A"/>
-    <rect x="48" y="8" width="40" height="40" fill="#1C1B1A"/>
-    <rect x="48" y="8" width="29.6" height="40" fill="#F5A623"/>
-    <circle cx="32" cy="29.6" r="5.9" fill="#1C1B1A"/>
+<svg width="338" height="118" viewBox="0 0 338 118" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="toukin">
+  <defs><clipPath id="wm-o"><circle cx="78" cy="58" r="33"/></clipPath>
+  <g clip-path="url(#wm-o)">
+    <rect x="45.0" y="25.0" width="66.0" height="66.0" fill="#FFFFFF"/>
+    <rect x="45.0" y="58.0" width="33.0" height="33.0" fill="#1C1B1A"/>
+    <rect x="78.0" y="25.0" width="33.0" height="33.0" fill="#1C1B1A"/>
+    <rect x="78.0" y="25.0" width="24.4" height="33.0" fill="#F5A623"/>
+    <circle cx="64.8" cy="42.8" r="4.9" fill="#1C1B1A"/>
+  </g></defs>
+  <g font-family="'Manrope', Arial, sans-serif" font-weight="800" font-size="104" fill="#FBFAF7" letter-spacing="-2">
+    <text x="8" y="88">t</text>
+    <text x="109" y="88">ukin</text>
   </g>
-  <text x="104" y="50" font-family="'Fraunces', Georgia, serif" font-size="40" font-weight="600" letter-spacing="0.5" fill="#FBFAF7">Toukin</text>
-  <text x="106" y="72" font-family="'Manrope', Arial, sans-serif" font-size="12.5" font-weight="700" letter-spacing="3.4" fill="#F5A623">COLLECTIF SANTÉ</text>
 </svg>

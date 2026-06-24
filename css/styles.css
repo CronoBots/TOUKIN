@@ -93,6 +93,15 @@ h2.title { font-size: clamp(2rem, 4.4vw, 3.4rem); margin: 18px 0 18px; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand img { height: 46px; width: auto; }
+
+/* Inline official wordmark: t [toucan = o] ukin */
+.brand-wm { display: inline-flex; align-items: center; font-family: var(--ff-sans);
+  font-weight: 800; font-size: 31px; letter-spacing: -.045em; color: var(--forest); line-height: 1; white-space: nowrap; }
+.brand-wm .o { display: inline-flex; width: .86em; height: .86em; margin: 0 -.02em 0 -.05em;
+  align-self: center; transform: translateY(.07em); }
+.brand-wm .o svg { width: 100%; height: 100%; display: block; }
+.brand-wm.light { color: var(--cream); font-size: 34px; }
+.header.scrolled .brand-wm { font-size: 28px; transition: font-size .4s var(--ease); }
 .nav-links { display: flex; align-items: center; gap: 30px; }
 .nav-links a { font-weight: 600; font-size: .96rem; color: var(--forest); position: relative; padding: 4px 0; }
 .nav-links a::after { content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px; background: var(--beak); transition: width .3s var(--ease); }
@@ -139,6 +148,10 @@ h2.title { font-size: clamp(2rem, 4.4vw, 3.4rem); margin: 18px 0 18px; }
 .hero-badge small { color: var(--muted); font-size: .8rem; }
 .hero-badge.top { left: auto; right: -20px; top: 28px; bottom: auto; animation-delay: .8s; }
 @keyframes float { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
+
+.hero-stamp { position: absolute; left: -34px; top: -34px; width: 132px; height: 132px; z-index: 4;
+  filter: drop-shadow(0 10px 24px rgba(28,27,26,.18)); animation: spin 26s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 .hero-blob { position: absolute; inset: auto -40px -40px auto; width: 220px; height: 220px; z-index:-1;
   background: radial-gradient(circle at 30% 30%, var(--amber), var(--beak-2)); opacity: .14; filter: blur(8px); border-radius: 46% 54% 60% 40% / 50% 42% 58% 50%; }
@@ -307,7 +320,7 @@ h2.title { font-size: clamp(2rem, 4.4vw, 3.4rem); margin: 18px 0 18px; }
 [data-reveal][data-delay="2"] { transition-delay: .16s; }
 [data-reveal][data-delay="3"] { transition-delay: .24s; }
 [data-reveal][data-delay="4"] { transition-delay: .32s; }
-@media (prefers-reduced-motion: reduce) { [data-reveal]{opacity:1;transform:none;transition:none;} .strip .track,.hero-badge{animation:none;} html{scroll-behavior:auto;} }
+@media (prefers-reduced-motion: reduce) { [data-reveal]{opacity:1;transform:none;transition:none;} .strip .track,.hero-badge,.hero-stamp{animation:none;} html{scroll-behavior:auto;} }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
@@ -334,5 +347,6 @@ h2.title { font-size: clamp(2rem, 4.4vw, 3.4rem); margin: 18px 0 18px; }
   body { font-size: 16px; }
   .services-grid, .reviews-grid, .band-grid, .classes-grid, .social-grid, .footer-grid, .team-grid { grid-template-columns: 1fr; }
   .hero-badge.top { display: none; }
+  .hero-stamp { width: 96px; height: 96px; left: -14px; top: -14px; }
   .hero-meta { gap: 20px; }
 }

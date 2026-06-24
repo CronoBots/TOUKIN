@@ -1,0 +1,18 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Toukin — Physiothérapie — Tolochenaz">
+  <defs>
+    <clipPath id="em-mk"><circle cx="150" cy="150" r="74"/></clipPath>
+    <path id="em-top" d="M 46.08 90.00 A 120 120 0 0 1 253.92 90.00"/><path id="em-bot" d="M 50.52 217.10 A 120 120 0 0 0 249.48 217.10"/><path id="em-left" d="M 48.23 213.59 A 120 120 0 0 1 48.23 86.41"/>
+  </defs>
+  <g clip-path="url(#em-mk)">
+    <rect x="76.0" y="76.0" width="148.0" height="148.0" fill="#FFFFFF"/>
+    <rect x="76.0" y="150.0" width="74.0" height="74.0" fill="#1C1B1A"/>
+    <rect x="150.0" y="76.0" width="74.0" height="74.0" fill="#1C1B1A"/>
+    <rect x="150.0" y="76.0" width="54.8" height="74.0" fill="#F5A623"/>
+    <circle cx="120.4" cy="116.0" r="11.0" fill="#1C1B1A"/>
+  </g>
+  <g font-family="'Manrope', Arial, sans-serif" font-weight="700" fill="#1C1B1A" font-size="21.5" letter-spacing="2.5">
+    <text><textPath href="#em-top" startOffset="50%" text-anchor="middle">PHYSIOTHERAPIE</textPath></text>
+    <text><textPath href="#em-bot" startOffset="50%" text-anchor="middle">TOLOCHENAZ</textPath></text>
+    <text><textPath href="#em-left" startOffset="50%" text-anchor="middle">TOUKIN</textPath></text>
+  </g>
+</svg>
