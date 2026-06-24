@@ -17,9 +17,16 @@ Ajoutez vos fichiers dans le dépôt en **respectant exactement ces noms** :
 | `assets/logo-mark.svg` | Votre logo **sans texte** (icône/favicon) | SVG (ou PNG carré) |
 | `assets/photos/hero.jpg` | Grande photo d'accueil (cabinet, soin) | JPG, ~1200×1500 px |
 | `assets/photos/approche.jpg` | Photo « approche » (salle, matériel) | JPG, ~1000×800 px |
-| `assets/photos/logan.jpg` | Portrait de **Logan Mulyk** | JPG, ~600×750 px |
-| `assets/photos/equipe.jpg` | Photo de l'équipe / 2e thérapeute | JPG, ~600×750 px |
+| `assets/photos/logan.jpg` | Portrait de **Logan Mulyk** _(à fournir)_ | JPG, ~760×950 px |
+| `assets/photos/laetitia.jpg` | Portrait de **Laetitia Ruivo** ✅ _déjà présent_ | JPG, ~760×950 px |
+| `assets/photos/anais.jpg` | Portrait d'**Anaïs Zdzioblo** ✅ _déjà présent_ | JPG, ~760×950 px |
 | `assets/photos/video.jpg` | Vignette pour le bloc vidéo YouTube | JPG, ~1400×600 px |
+
+> 🧑‍⚕️ **Portraits de l'équipe** — Laetitia et Anaïs ont été **extraits de votre
+> capture d'écran tBooking** (redressés et recadrés). La qualité est limitée par
+> la source (photo d'écran) : remplacez-les par les versions HD quand vous
+> pourrez. **Logan** affiche pour l'instant un médaillon « LM » : déposez
+> `assets/photos/logan.jpg` pour le remplacer par sa vraie photo.
 
 👉 Tant qu'un fichier est absent, une **image de remplacement** s'affiche
 automatiquement (rien n'est cassé). Dès que vous ajoutez le bon fichier,
