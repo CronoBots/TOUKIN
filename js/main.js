@@ -148,4 +148,28 @@
       el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
   });
+
+  /* ---- FAQ : un seul panneau ouvert à la fois ---- */
+  safe(() => {
+    const items = $$('.faq-item');
+    items.forEach(d => d.addEventListener('toggle', () => {
+      if (d.open) items.forEach(o => { if (o !== d) o.open = false; });
+    }));
+  });
+
+  /* ---- Tilt 3D subtil des cartes (desktop, sans reduced-motion) ---- */
+  safe(() => {
+    if (!fine || reduce) return;
+    const cards = $$('.member, .class-card, .social-card, .trust');
+    cards.forEach(el => {
+      el.classList.add('tiltable');
+      el.addEventListener('mousemove', (e) => {
+        const r = el.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - .5;
+        const py = (e.clientY - r.top) / r.height - .5;
+        el.style.transform = `perspective(800px) rotateX(${(-py * 5).toFixed(2)}deg) rotateY(${(px * 5).toFixed(2)}deg) translateY(-5px)`;
+      });
+      el.addEventListener('mouseleave', () => { el.style.transform = ''; });
+    });
+  });
 })();
