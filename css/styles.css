@@ -514,6 +514,13 @@ body.menu-open { overflow: hidden; }
 .founder-quote { margin: 28px 0 0; padding: 6px 0 6px 22px; border-left: 3px solid var(--amber);
   font-family: var(--serif); font-style: italic; font-size: clamp(1.12rem, 1.9vw, 1.38rem); line-height: 1.42; color: var(--black); }
 
+/* ---- Footer credit (signature) ---- */
+.footer-bottom .credit { color: rgba(239,235,228,.55); display: inline-flex; align-items: center; gap: 7px; }
+.footer-bottom .credit::before { content:""; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex: 0 0 auto; }
+.footer-bottom .credit a { color: #EFEBE4; font-weight: 700; letter-spacing: .01em; transition: color .3s var(--ease); }
+.footer-bottom .credit a:hover { color: var(--amber); }
+@media (max-width: 760px) { .footer-bottom .f-mid { display: none; } }
+
 /* ---- Trust grid ---- */
 .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: clamp(42px, 5vw, 66px); }
 .trust { background: var(--white); box-shadow: var(--shadow-sm); border-radius: var(--r-lg); padding: 26px 24px;
