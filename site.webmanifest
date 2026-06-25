@@ -1,0 +1,16 @@
+{
+  "name": "Toukin — Collectif santé",
+  "short_name": "Toukin",
+  "description": "Physiothérapie, ostéopathie et préparation physique à Tolochenaz (VD).",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1C1B1A",
+  "theme_color": "#1C1B1A",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
