@@ -172,4 +172,63 @@
       el.addEventListener('mouseleave', () => { el.style.transform = ''; });
     });
   });
+
+  /* ---- Statut Ouvert / Fermé (heure suisse) + appel direct ---- */
+  safe(() => {
+    const TEL = '+41782401395', TELDISP = '078 240 13 95';
+    const PHONE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    const days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    const OPEN = 480; // 08:00
+    const closeFor = (d) => (d >= 1 && d <= 4) ? 1110 : (d === 5 ? 1050 : null); // Lun–Jeu 18h30, Ven 17h30
+    const fmt = (mins) => Math.floor(mins / 60) + 'h' + String(mins % 60).padStart(2, '0');
+
+    const now = () => {
+      try {
+        const parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+        const get = (t) => parts.find(x => x.type === t).value;
+        const map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+        let h = parseInt(get('hour'), 10); if (h === 24) h = 0;
+        return { day: map[get('weekday')], cur: h * 60 + parseInt(get('minute'), 10) };
+      } catch (e) {
+        const d = new Date();
+        return { day: d.getDay(), cur: d.getHours() * 60 + d.getMinutes() };
+      }
+    };
+
+    const pill = document.createElement('a');
+    pill.className = 'status-pill';
+    pill.innerHTML = '<span class="sdot"></span><span class="stxt"><b class="sstate"></b><span class="ssub"></span></span>';
+    document.body.appendChild(pill);
+    const state = pill.querySelector('.sstate'), sub = pill.querySelector('.ssub');
+
+    const render = () => {
+      const { day, cur } = now();
+      const close = closeFor(day);
+      const open = close !== null && cur >= OPEN && cur < close;
+      pill.classList.toggle('open', open);
+      pill.classList.toggle('closed', !open);
+      if (open) {
+        pill.href = 'tel:' + TEL;
+        pill.setAttribute('aria-label', 'Centre ouvert — appeler le ' + TELDISP);
+        state.textContent = 'Ouvert · ferme à ' + fmt(close);
+        sub.innerHTML = PHONE_SVG + TELDISP;
+      } else {
+        let target = { d: 1, ahead: 1 };
+        if (close !== null && cur < OPEN) target = { d: day, ahead: 0 };
+        else for (let i = 1; i <= 7; i++) { const d = (day + i) % 7; if (closeFor(d) !== null) { target = { d, ahead: i }; break; } }
+        const when = target.ahead === 0 ? "aujourd'hui à " + fmt(OPEN)
+          : target.ahead === 1 ? 'demain à ' + fmt(OPEN)
+          : days[target.d] + ' à ' + fmt(OPEN);
+        pill.href = '#contact';
+        pill.setAttribute('aria-label', 'Centre fermé — ouvre ' + when);
+        state.textContent = 'Fermé';
+        sub.textContent = 'Ouvre ' + when;
+      }
+    };
+
+    render();
+    setTimeout(() => pill.classList.add('show'), 700);
+    setInterval(render, 60000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
+  });
 })();

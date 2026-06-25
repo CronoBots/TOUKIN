@@ -514,6 +514,32 @@ body.menu-open { overflow: hidden; }
 .founder-quote { margin: 28px 0 0; padding: 6px 0 6px 22px; border-left: 3px solid var(--amber);
   font-family: var(--serif); font-style: italic; font-size: clamp(1.12rem, 1.9vw, 1.38rem); line-height: 1.42; color: var(--black); }
 
+/* ---- Statut Ouvert / Fermé (badge flottant) ---- */
+.status-pill { position: fixed; left: clamp(14px, 3vw, 28px); bottom: clamp(14px, 3vw, 28px); z-index: 131;
+  display: inline-flex; align-items: center; gap: 12px; background: var(--white); color: var(--black);
+  box-shadow: var(--shadow-md); border-radius: 100px; padding: 10px 20px 10px 15px; text-decoration: none;
+  max-width: calc(100vw - 32px);
+  opacity: 0; visibility: hidden; transform: translateY(16px) scale(.96);
+  transition: opacity .5s var(--ease), transform .5s var(--ease), visibility .5s, box-shadow .35s var(--ease); }
+.status-pill.show { opacity: 1; visibility: visible; transform: none; }
+.status-pill:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.status-pill .sdot { width: 11px; height: 11px; border-radius: 50%; flex: 0 0 auto; position: relative; }
+.status-pill.open .sdot { background: #2BA55B; }
+.status-pill.closed .sdot { background: #D8473E; }
+.status-pill.open .sdot::after { content:""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid #2BA55B; animation: spulse 1.9s var(--ease) infinite; }
+@keyframes spulse { 0% { transform: scale(.55); opacity: .7; } 100% { transform: scale(1.5); opacity: 0; } }
+.status-pill .stxt { display: flex; flex-direction: column; line-height: 1.18; min-width: 0; }
+.status-pill .sstate { font-size: .8rem; font-weight: 800; letter-spacing: .01em; white-space: nowrap; }
+.status-pill.open .sstate { color: #1E7A42; }
+.status-pill.closed .sstate { color: #B23A32; }
+.status-pill .ssub { display: inline-flex; align-items: center; gap: 6px; font-size: .86rem; font-weight: 700; color: var(--black); white-space: nowrap; }
+.status-pill.closed .ssub { color: var(--muted); font-weight: 600; }
+.status-pill .ssub svg { width: 14px; height: 14px; flex: 0 0 auto; }
+@media (max-width: 620px) {
+  .status-pill { padding: 9px 16px 9px 13px; gap: 10px; }
+  .status-pill .ssub { font-size: .82rem; }
+}
+
 /* ---- Footer credit (signature) ---- */
 .footer-bottom .credit { color: rgba(239,235,228,.55); display: inline-flex; align-items: center; gap: 7px; }
 .footer-bottom .credit::before { content:""; width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex: 0 0 auto; }
