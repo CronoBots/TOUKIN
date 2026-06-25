@@ -49,9 +49,16 @@
   /* ---- Hero photo zoom-in ---- */
   safe(() => { const hp = $('.hero-photo img'); if (hp) setTimeout(() => hp.classList.add('in'), 220); });
 
-  /* ---- Scroll progress + header behaviour + parallax ---- */
+  /* ---- Back to top ---- */
   safe(() => {
-    const bar = $('.progress'), header = $('.header');
+    const btn = $('.to-top');
+    if (!btn) return;
+    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }));
+  });
+
+  /* ---- Scroll progress + header behaviour + parallax + back-to-top ---- */
+  safe(() => {
+    const bar = $('.progress'), header = $('.header'), toTop = $('.to-top');
     const pxEls = $$('[data-parallax]');
     let lastY = 0, ticking = false;
     const onScroll = () => {
@@ -60,6 +67,7 @@
         const p = yy / ((root.scrollHeight - root.clientHeight) || 1);
         bar.style.width = (p * 100) + '%';
       }
+      if (toTop) toTop.classList.toggle('show', yy > 600);
       if (header) {
         header.classList.toggle('scrolled', yy > 24);
         if (yy > 440 && yy > lastY + 4) header.classList.add('hide');

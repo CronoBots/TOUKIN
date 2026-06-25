@@ -438,6 +438,17 @@ h1,h2,h3,h4 { font-family: var(--serif); font-weight: 600; line-height: 1.04; co
   html { scroll-behavior: auto; }
 }
 
+/* ---------- Back to top ---------- */
+.to-top { position: fixed; right: clamp(18px, 3vw, 34px); bottom: clamp(18px, 3vw, 34px); z-index: 130;
+  width: 54px; height: 54px; border-radius: 50%; background: var(--amber); color: var(--black);
+  display: grid; place-items: center; box-shadow: 0 12px 30px rgba(28,27,26,.22);
+  opacity: 0; visibility: hidden; transform: translateY(16px) scale(.85);
+  transition: opacity .4s var(--ease), transform .4s var(--ease), visibility .4s, background .3s var(--ease); }
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { background: var(--black); color: var(--amber); transform: translateY(-3px); }
+.to-top svg { width: 22px; height: 22px; }
+@media (max-width: 620px) { .to-top { width: 48px; height: 48px; } }
+
 /* ---------- Refinements: softer, modern framing ---------- */
 .nav-book { display: none; }
 body.menu-open { overflow: hidden; }
