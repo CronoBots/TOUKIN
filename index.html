@@ -13,6 +13,8 @@
   <meta property="og:title" content="Toukin — Collectif santé · Tolochenaz" />
   <meta property="og:description" content="Centre pluridisciplinaire dédié au mouvement : physiothérapie, ostéopathie, préparation physique et cours collectifs à Tolochenaz (VD)." />
   <meta property="og:locale" content="fr_CH" />
+  <meta property="og:locale:alternate" content="en_CH" />
+  <meta property="og:locale:alternate" content="de_CH" />
   <meta property="og:url" content="https://cronobots.github.io/TOUKIN/" />
   <meta property="og:site_name" content="Toukin — Collectif santé" />
   <meta property="og:image" content="https://cronobots.github.io/TOUKIN/assets/photos/cabinet/cab-1.jpg" />
@@ -49,7 +51,7 @@
     "paymentAccepted": "Espèces, Facture, TWINT",
     "currenciesAccepted": "CHF",
     "areaServed": ["Tolochenaz", "Morges", "Etagnières", "Vaud"],
-    "availableLanguage": ["fr", "en"],
+    "availableLanguage": ["fr", "en", "de"],
     "medicalSpecialty": "Physiotherapy",
     "hasMap": "https://maps.google.com/?q=Route+de+Gen%C3%A8ve+32C,+1131+Tolochenaz",
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "1", "bestRating": "5" },
@@ -79,19 +81,29 @@
         <span class="brand-wm">t<span class="o"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="hm"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#hm)"><rect width="100" height="100" fill="#fff"/><rect y="50" width="50" height="50" fill="#1C1B1A"/><rect x="50" width="50" height="50" fill="#1C1B1A"/><rect x="50" width="37" height="50" fill="#F5A623"/><circle cx="30" cy="27" r="7.4" fill="#1C1B1A"/></g></svg></span>ukin</span>
       </a>
       <nav class="nav-links" aria-label="Navigation principale">
-        <a href="#services">Soins</a>
-        <a href="#approche">Approche</a>
-        <a href="#centre">Le centre</a>
-        <a href="#equipe">Équipe</a>
-        <a href="#social">Médias</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-        <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary nav-book"><span>Prendre rendez-vous</span></a>
+        <a href="#services" data-i18n="nav.care">Soins</a>
+        <a href="#approche" data-i18n="nav.approach">Approche</a>
+        <a href="#centre" data-i18n="nav.center">Le centre</a>
+        <a href="#equipe" data-i18n="nav.team">Équipe</a>
+        <a href="#social" data-i18n="nav.media">Médias</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary nav-book"><span data-i18n="nav.book">Prendre rendez-vous</span></a>
+        <div class="lang-switch lang-switch--menu" role="group" aria-label="Choisir la langue / Choose language / Sprache wählen">
+          <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        </div>
       </nav>
       <div class="nav-cta">
-        <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost">Nous écrire</a>
+        <div class="lang-switch" role="group" aria-label="Choisir la langue / Choose language / Sprache wählen">
+          <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        </div>
+        <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost" data-i18n="nav.write">Nous écrire</a>
         <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary book" data-magnetic>
-          <span>Prendre RDV</span>
+          <span data-i18n="nav.bookShort">Prendre RDV</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -105,13 +117,13 @@
     <span class="hero-bg-word" aria-hidden="true">toukin</span>
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <div class="hero-kicker" data-anim="fade-up"><span class="ln"></span> Physiothérapie · Ostéopathie · Préparation physique</div>
-        <h1 data-anim="fade-up" data-delay="1">Votre centre de <span class="it">physiothérapie</span>,<br>à Tolochenaz.</h1>
-        <p class="lead" data-anim="fade-up" data-delay="2">Un collectif santé pluridisciplinaire qui réunit le soin, la rééducation et la préparation physique sous un même toit — pour vous accompagner du premier bilan jusqu'à votre autonomie.</p>
+        <div class="hero-kicker" data-anim="fade-up"><span class="ln"></span> <span data-i18n="hero.kicker">Physiothérapie · Ostéopathie · Préparation physique</span></div>
+        <h1 data-anim="fade-up" data-delay="1" data-i18n="hero.h1">Votre centre de <span class="it">physiothérapie</span>,<br>à Tolochenaz.</h1>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="hero.lead">Un collectif santé pluridisciplinaire qui réunit le soin, la rééducation et la préparation physique sous un même toit — pour vous accompagner du premier bilan jusqu'à votre autonomie.</p>
 
         <div class="hero-cta" data-anim="fade-up" data-delay="3">
           <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
-            <span>Réserver en ligne</span>
+            <span data-i18n="hero.reserve">Réserver en ligne</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="tel:+41782401395" class="btn btn-ghost">
@@ -121,16 +133,16 @@
         </div>
 
         <ul class="hero-points" data-stagger data-anim="fade">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Avec ou sans ordonnance</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Conventionné assurances</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>2 sites : Tolochenaz &amp; Etagnières</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Du lundi au vendredi, dès 8h</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p1">Avec ou sans ordonnance</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p2">Conventionné assurances</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p3">2 sites : Tolochenaz &amp; Etagnières</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="hero.p4">Du lundi au vendredi, dès 8h</span></li>
         </ul>
 
         <div class="hero-meta" data-anim="fade-up" data-delay="3">
-          <div class="stat"><strong data-count="5.0" data-suffix="★">5.0★</strong><span>Note des patients</span></div>
-          <div class="stat"><strong data-count="6" data-suffix="">6</strong><span>Disciplines réunies</span></div>
-          <div class="stat"><strong data-count="16" data-suffix="">16</strong><span>Domaines de soin</span></div>
+          <div class="stat"><strong data-count="5.0" data-suffix="★">5.0★</strong><span data-i18n="hero.stat1">Note des patients</span></div>
+          <div class="stat"><strong data-count="6" data-suffix="">6</strong><span data-i18n="hero.stat2">Disciplines réunies</span></div>
+          <div class="stat"><strong data-count="16" data-suffix="">16</strong><span data-i18n="hero.stat3">Domaines de soin</span></div>
         </div>
       </div>
 
@@ -146,32 +158,32 @@
         </div>
         <div class="hero-badge top">
           <div class="dot"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77 5.82 21l1.18-6.88-5-4.87 7.1-1.01z"/></svg></div>
-          <div><b>5,0 ★</b><small>Avis patients vérifiés</small></div>
+          <div><b>5,0 ★</b><small data-i18n="hero.badgeSub">Avis patients vérifiés</small></div>
         </div>
       </div>
     </div>
-    <div class="hero-scroll" aria-hidden="true">Défiler<span class="bar"></span></div>
+    <div class="hero-scroll" aria-hidden="true"><span data-i18n="hero.scroll">Défiler</span><span class="bar"></span></div>
   </section>
 
   <!-- ============ MARQUEE ============ -->
   <div class="strip" aria-hidden="true">
     <div class="track">
-      <span>Physiothérapie</span><span>Ostéopathie</span><span>Préparation physique</span>
-      <span>Massages thérapeutiques</span><span>Nutrition</span><span>Yoga &amp; Pilates</span>
-      <span>Physio respiratoire</span><span>Physio neurologique</span><span>Cours collectifs</span>
-      <span>Physiothérapie</span><span>Ostéopathie</span><span>Préparation physique</span>
-      <span>Massages thérapeutiques</span><span>Nutrition</span><span>Yoga &amp; Pilates</span>
-      <span>Physio respiratoire</span><span>Physio neurologique</span><span>Cours collectifs</span>
+      <span data-i18n="m.physio">Physiothérapie</span><span data-i18n="m.osteo">Ostéopathie</span><span data-i18n="m.prep">Préparation physique</span>
+      <span data-i18n="m.massage">Massages thérapeutiques</span><span data-i18n="m.nutrition">Nutrition</span><span data-i18n="m.yoga">Yoga &amp; Pilates</span>
+      <span data-i18n="m.resp">Physio respiratoire</span><span data-i18n="m.neuro">Physio neurologique</span><span data-i18n="m.group">Cours collectifs</span>
+      <span data-i18n="m.physio">Physiothérapie</span><span data-i18n="m.osteo">Ostéopathie</span><span data-i18n="m.prep">Préparation physique</span>
+      <span data-i18n="m.massage">Massages thérapeutiques</span><span data-i18n="m.nutrition">Nutrition</span><span data-i18n="m.yoga">Yoga &amp; Pilates</span>
+      <span data-i18n="m.resp">Physio respiratoire</span><span data-i18n="m.neuro">Physio neurologique</span><span data-i18n="m.group">Cours collectifs</span>
     </div>
   </div>
 
   <!-- ============ MANIFESTE ============ -->
   <section class="section tight">
     <div class="wrap manifesto">
-      <p class="big" data-anim="fade">Une douleur n'est pas un ennemi à faire taire : c'est un signal. Mon rôle, c'est d'en chercher l'origine avec vous, puis de vous remettre <em>en mouvement</em> pour de bon.</p>
+      <p class="big" data-anim="fade" data-i18n="man.big">Une douleur n'est pas un ennemi à faire taire : c'est un signal. Mon rôle, c'est d'en chercher l'origine avec vous, puis de vous remettre <em>en mouvement</em> pour de bon.</p>
       <div class="sign" data-anim="fade-up">
         <img class="em" src="assets/logo-mark.svg" alt="" aria-hidden="true" />
-        Logan Mulyk · Fondateur du collectif Toukin
+        <span data-i18n="man.sign">Logan Mulyk · Fondateur du collectif Toukin</span>
       </div>
     </div>
   </section>
@@ -180,67 +192,67 @@
   <section class="section soft" id="services">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="01" data-anim="fade-up">Nos soins</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Six expertises complémentaires,<br><span class="it">une seule équipe</span></h2>
+        <span class="kicker" data-index="01" data-anim="fade-up" data-i18n="svc.kicker">Nos soins</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="svc.title">Six expertises complémentaires,<br><span class="it">une seule équipe</span></h2>
       </div>
       <div class="svc-list">
         <article class="svc" data-anim="fade-up">
           <div class="num">01</div>
-          <h3>Physiothérapie</h3>
-          <p>Rééducation musculo-squelettique, thérapie manuelle et exercices actifs — avec ou sans prescription.</p>
-          <span class="svc-tag">Conventionné</span>
+          <h3 data-i18n="svc.1.h">Physiothérapie</h3>
+          <p data-i18n="svc.1.p">Rééducation musculo-squelettique, thérapie manuelle et exercices actifs — avec ou sans prescription.</p>
+          <span class="svc-tag" data-i18n="svc.1.tag">Conventionné</span>
         </article>
         <article class="svc" data-anim="fade-up">
           <div class="num">02</div>
-          <h3>Ostéopathie</h3>
-          <p>Un travail manuel sur la mobilité des tissus et les tensions, pour redonner de l'aisance au corps.</p>
-          <span class="svc-tag">Holistique</span>
+          <h3 data-i18n="svc.2.h">Ostéopathie</h3>
+          <p data-i18n="svc.2.p">Un travail manuel sur la mobilité des tissus et les tensions, pour redonner de l'aisance au corps.</p>
+          <span class="svc-tag" data-i18n="svc.2.tag">Holistique</span>
         </article>
         <article class="svc" data-anim="fade-up">
           <div class="num">03</div>
-          <h3>Préparation physique</h3>
-          <p>Renforcement, reathlétisation et performance. Des programmes individualisés, du sportif au quotidien.</p>
-          <span class="svc-tag">Performance</span>
+          <h3 data-i18n="svc.3.h">Préparation physique</h3>
+          <p data-i18n="svc.3.p">Renforcement, reathlétisation et performance. Des programmes individualisés, du sportif au quotidien.</p>
+          <span class="svc-tag" data-i18n="svc.3.tag">Performance</span>
         </article>
         <article class="svc" data-anim="fade-up">
           <div class="num">04</div>
-          <h3>Massages thérapeutiques</h3>
-          <p>Techniques manuelles ciblées pour relâcher les tensions et accompagner la récupération.</p>
-          <span class="svc-tag">Récupération</span>
+          <h3 data-i18n="svc.4.h">Massages thérapeutiques</h3>
+          <p data-i18n="svc.4.p">Techniques manuelles ciblées pour relâcher les tensions et accompagner la récupération.</p>
+          <span class="svc-tag" data-i18n="svc.4.tag">Récupération</span>
         </article>
         <article class="svc" data-anim="fade-up">
           <div class="num">05</div>
-          <h3>Nutrition</h3>
-          <p>Des conseils concrets pour mieux récupérer, retrouver de l'énergie et tenir vos objectifs.</p>
-          <span class="svc-tag">Bien-être</span>
+          <h3 data-i18n="svc.5.h">Nutrition</h3>
+          <p data-i18n="svc.5.p">Des conseils concrets pour mieux récupérer, retrouver de l'énergie et tenir vos objectifs.</p>
+          <span class="svc-tag" data-i18n="svc.5.tag">Bien-être</span>
         </article>
         <article class="svc" data-anim="fade-up">
           <div class="num">06</div>
-          <h3>Physio spécialisée</h3>
-          <p>Physiothérapie respiratoire, neurologique et prise en charge complexe de plusieurs régions.</p>
-          <span class="svc-tag">Expertise</span>
+          <h3 data-i18n="svc.6.h">Physio spécialisée</h3>
+          <p data-i18n="svc.6.p">Physiothérapie respiratoire, neurologique et prise en charge complexe de plusieurs régions.</p>
+          <span class="svc-tag" data-i18n="svc.6.tag">Expertise</span>
         </article>
       </div>
 
       <div class="spec" data-anim="fade-up">
-        <span class="spec-label">Domaines de prise en charge</span>
+        <span class="spec-label" data-i18n="svc.specLabel">Domaines de prise en charge</span>
         <ul class="spec-chips" data-stagger data-anim="fade">
-          <li>École du dos</li>
-          <li>Rééducation post-opératoire</li>
-          <li>Post-traumatique &amp; orthopédie</li>
-          <li>Thérapie manuelle</li>
-          <li>Dry needling</li>
-          <li>Drainage lymphatique &amp; bandage</li>
-          <li>Rééducation périnéale</li>
-          <li>Sénologie</li>
-          <li>Oncologie</li>
-          <li>Post-partum</li>
-          <li>Douleur chronique</li>
-          <li>Physio respiratoire</li>
-          <li>Physio neurologique</li>
-          <li>Reathlétisation</li>
-          <li>Massothérapie</li>
-          <li>Séances à domicile</li>
+          <li data-i18n="chip.1">École du dos</li>
+          <li data-i18n="chip.2">Rééducation post-opératoire</li>
+          <li data-i18n="chip.3">Post-traumatique &amp; orthopédie</li>
+          <li data-i18n="chip.4">Thérapie manuelle</li>
+          <li data-i18n="chip.5">Dry needling</li>
+          <li data-i18n="chip.6">Drainage lymphatique &amp; bandage</li>
+          <li data-i18n="chip.7">Rééducation périnéale</li>
+          <li data-i18n="chip.8">Sénologie</li>
+          <li data-i18n="chip.9">Oncologie</li>
+          <li data-i18n="chip.10">Post-partum</li>
+          <li data-i18n="chip.11">Douleur chronique</li>
+          <li data-i18n="chip.12">Physio respiratoire</li>
+          <li data-i18n="chip.13">Physio neurologique</li>
+          <li data-i18n="chip.14">Reathlétisation</li>
+          <li data-i18n="chip.15">Massothérapie</li>
+          <li data-i18n="chip.16">Séances à domicile</li>
         </ul>
       </div>
     </div>
@@ -252,16 +264,16 @@
       <div class="media" data-anim="mask">
         <img src="assets/photos/approche.jpg" alt="Espace d'entraînement et de rééducation Toukin" loading="lazy"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80'" />
-        <div class="badge-stat"><strong>3</strong><span>soigner · renforcer · prévenir</span></div>
+        <div class="badge-stat"><strong>3</strong><span data-i18n="app.badge">soigner · renforcer · prévenir</span></div>
       </div>
       <div>
-        <span class="kicker" data-index="02" data-anim="fade-up">Notre philosophie</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Soigner, renforcer,<br><span class="it">prévenir</span></h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">Calmer un symptôme ne suffit pas. Nous cherchons d'où il vient — votre histoire, vos habitudes, votre objectif — pour construire un suivi qui tient dans le temps.</p>
+        <span class="kicker" data-index="02" data-anim="fade-up" data-i18n="app.kicker">Notre philosophie</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="app.title">Soigner, renforcer,<br><span class="it">prévenir</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="app.lead">Calmer un symptôme ne suffit pas. Nous cherchons d'où il vient — votre histoire, vos habitudes, votre objectif — pour construire un suivi qui tient dans le temps.</p>
         <ul class="feature-list" data-stagger data-anim="fade">
-          <li><span class="n">1</span><div><b>Bilan approfondi</b><p>Une première séance dédiée à la cause réelle, pas seulement à la douleur.</p></div></li>
-          <li><span class="n">2</span><div><b>Approche pluridisciplinaire</b><p>Physiothérapeutes, ostéopathes et préparateurs collaborent autour de vous.</p></div></li>
-          <li><span class="n">3</span><div><b>Vous rendre autonome</b><p>Des exercices et conseils concrets pour reprendre le contrôle de votre santé.</p></div></li>
+          <li><span class="n">1</span><div><b data-i18n="app.f1b">Bilan approfondi</b><p data-i18n="app.f1p">Une première séance dédiée à la cause réelle, pas seulement à la douleur.</p></div></li>
+          <li><span class="n">2</span><div><b data-i18n="app.f2b">Approche pluridisciplinaire</b><p data-i18n="app.f2p">Physiothérapeutes, ostéopathes et préparateurs collaborent autour de vous.</p></div></li>
+          <li><span class="n">3</span><div><b data-i18n="app.f3b">Vous rendre autonome</b><p data-i18n="app.f3p">Des exercices et conseils concrets pour reprendre le contrôle de votre santé.</p></div></li>
         </ul>
       </div>
     </div>
@@ -271,17 +283,17 @@
   <section class="section soft" id="centre">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="03" data-anim="fade-up">Nos espaces</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Un cadre où l'on se sent<br><span class="it">tout de suite à l'aise</span></h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">Lumière douce, salles de soin privatives et un vrai plateau d'entraînement — un espace calme, à deux pas du lac.</p>
+        <span class="kicker" data-index="03" data-anim="fade-up" data-i18n="ctr.kicker">Nos espaces</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="ctr.title">Un cadre où l'on se sent<br><span class="it">tout de suite à l'aise</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="ctr.lead">Lumière douce, salles de soin privatives et un vrai plateau d'entraînement — un espace calme, à deux pas du lac.</p>
       </div>
       <div class="gallery" data-anim="fade">
-        <figure class="g-item"><img src="assets/photos/cabinet/cab-1.jpg" alt="Salle de consultation et de soin du centre Toukin" loading="lazy" /><figcaption>Salle de consultation</figcaption></figure>
-        <figure class="g-item"><img src="assets/photos/cabinet/cab-3.jpg" alt="Détail décoratif et ambiance du centre Toukin" loading="lazy" /><figcaption>Détails &amp; ambiance</figcaption></figure>
-        <figure class="g-item"><img src="assets/photos/cabinet/cab-5.jpg" alt="Espace d'accueil et salle d'attente du centre Toukin" loading="lazy" /><figcaption>Espace d'accueil</figcaption></figure>
-        <figure class="g-item"><img src="assets/photos/cabinet/cab-4.jpg" alt="Salles de soin du centre Toukin" loading="lazy" /><figcaption>Salles de soin</figcaption></figure>
-        <figure class="g-item"><img src="assets/photos/cabinet/cab-2.jpg" alt="Plateau de mouvement et de rééducation" loading="lazy" /><figcaption>Plateau de mouvement</figcaption></figure>
-        <figure class="g-item"><img src="assets/photos/cabinet/cab-6.jpg" alt="Cabinet de soin du centre Toukin" loading="lazy" /><figcaption>Cabinet de soin</figcaption></figure>
+        <figure class="g-item"><img src="assets/photos/cabinet/cab-1.jpg" alt="Salle de consultation et de soin du centre Toukin" loading="lazy" /><figcaption data-i18n="gal.1">Salle de consultation</figcaption></figure>
+        <figure class="g-item"><img src="assets/photos/cabinet/cab-3.jpg" alt="Détail décoratif et ambiance du centre Toukin" loading="lazy" /><figcaption data-i18n="gal.2">Détails &amp; ambiance</figcaption></figure>
+        <figure class="g-item"><img src="assets/photos/cabinet/cab-5.jpg" alt="Espace d'accueil et salle d'attente du centre Toukin" loading="lazy" /><figcaption data-i18n="gal.3">Espace d'accueil</figcaption></figure>
+        <figure class="g-item"><img src="assets/photos/cabinet/cab-4.jpg" alt="Salles de soin du centre Toukin" loading="lazy" /><figcaption data-i18n="gal.4">Salles de soin</figcaption></figure>
+        <figure class="g-item"><img src="assets/photos/cabinet/cab-2.jpg" alt="Plateau de mouvement et de rééducation" loading="lazy" /><figcaption data-i18n="gal.5">Plateau de mouvement</figcaption></figure>
+        <figure class="g-item"><img src="assets/photos/cabinet/cab-6.jpg" alt="Cabinet de soin du centre Toukin" loading="lazy" /><figcaption data-i18n="gal.6">Cabinet de soin</figcaption></figure>
       </div>
     </div>
   </section>
@@ -290,9 +302,9 @@
   <section class="section" id="equipe">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="04" data-anim="fade-up">Le collectif</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Trois physiothérapeutes,<br><span class="it">une même rigueur</span></h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">Des spécialités qui se complètent — du sport à la rééducation périnéale — pour vous orienter vers la bonne personne dès le premier rendez-vous.</p>
+        <span class="kicker" data-index="04" data-anim="fade-up" data-i18n="team.kicker">Le collectif</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="team.title">Trois physiothérapeutes,<br><span class="it">une même rigueur</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="team.lead">Des spécialités qui se complètent — du sport à la rééducation périnéale — pour vous orienter vers la bonne personne dès le premier rendez-vous.</p>
       </div>
       <div class="team-grid" data-stagger data-anim="fade">
         <article class="member">
@@ -300,13 +312,13 @@
             <img src="assets/photos/logan.jpg" alt="Logan Mulyk, physiothérapeute" loading="lazy"
                  onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='grid'" />
             <div class="ph" style="display:none" data-initials="LM"></div>
-            <span class="tagn">Fondateur</span>
+            <span class="tagn" data-i18n="team.foundTag">Fondateur</span>
           </div>
           <div class="info">
             <h3>Logan Mulyk</h3>
-            <div class="role">Physiothérapeute</div>
-            <p>Physiothérapie générale et sportive, respiratoire, douleur chronique et dos. Thérapie manuelle d'inspiration ostéopathique et dry needling. Également à domicile.</p>
-            <div class="creds"><span>Physio sportive</span><span>Thérapie manuelle</span><span>Dry needling</span><span>Douleur chronique</span><span>Dos</span><span>À domicile</span></div>
+            <div class="role" data-i18n="team.roleM">Physiothérapeute</div>
+            <p data-i18n="team.logan.p">Physiothérapie générale et sportive, respiratoire, douleur chronique et dos. Thérapie manuelle d'inspiration ostéopathique et dry needling. Également à domicile.</p>
+            <div class="creds"><span data-i18n="team.logan.c1">Physio sportive</span><span data-i18n="team.logan.c2">Thérapie manuelle</span><span data-i18n="team.logan.c3">Dry needling</span><span data-i18n="team.logan.c4">Douleur chronique</span><span data-i18n="team.logan.c5">Dos</span><span data-i18n="team.logan.c6">À domicile</span></div>
           </div>
         </article>
         <article class="member">
@@ -317,9 +329,9 @@
           </div>
           <div class="info">
             <h3>Laetitia Ruivo</h3>
-            <div class="role">Physiothérapeute</div>
-            <p>Physiothérapie générale, drainage lymphatique et bandage, ainsi que physiothérapie respiratoire.</p>
-            <div class="creds"><span>Physio générale</span><span>Drainage lymphatique</span><span>Bandage</span><span>Respiratoire</span></div>
+            <div class="role" data-i18n="team.roleF">Physiothérapeute</div>
+            <p data-i18n="team.laetitia.p">Physiothérapie générale, drainage lymphatique et bandage, ainsi que physiothérapie respiratoire.</p>
+            <div class="creds"><span data-i18n="team.laetitia.c1">Physio générale</span><span data-i18n="team.laetitia.c2">Drainage lymphatique</span><span data-i18n="team.laetitia.c3">Bandage</span><span data-i18n="team.laetitia.c4">Respiratoire</span></div>
           </div>
         </article>
         <article class="member">
@@ -330,9 +342,9 @@
           </div>
           <div class="info">
             <h3>Anaïs Zdzioblo</h3>
-            <div class="role">Physiothérapeute</div>
-            <p>Physiothérapie générale, sénologie, rééducation post-partum et accompagnement en oncologie.</p>
-            <div class="creds"><span>Physio générale</span><span>Sénologie</span><span>Post-partum</span><span>Oncologie</span></div>
+            <div class="role" data-i18n="team.roleF">Physiothérapeute</div>
+            <p data-i18n="team.anais.p">Physiothérapie générale, sénologie, rééducation post-partum et accompagnement en oncologie.</p>
+            <div class="creds"><span data-i18n="team.anais.c1">Physio générale</span><span data-i18n="team.anais.c2">Sénologie</span><span data-i18n="team.anais.c3">Post-partum</span><span data-i18n="team.anais.c4">Oncologie</span></div>
           </div>
         </article>
       </div>
@@ -345,21 +357,21 @@
       <div class="media founder-media" data-anim="mask">
         <img src="assets/photos/logan.jpg" alt="Logan Mulyk, fondateur du collectif Toukin" loading="lazy"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=900&q=80'" />
-        <div class="badge-stat"><strong>Hôpital&nbsp;de&nbsp;Morges</strong><span>Collaboration clinique</span></div>
+        <div class="badge-stat"><strong>Hôpital&nbsp;de&nbsp;Morges</strong><span data-i18n="fnd.badge">Collaboration clinique</span></div>
       </div>
       <div>
-        <span class="kicker" data-index="05" data-anim="fade-up">Le fondateur</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Logan Mulyk,<br><span class="it">l'exigence du soin</span></h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">Physiothérapeute et étudiant en médecine, Logan a monté Toukin autour d'une idée simple : des thérapeutes qui se parlent, du temps pour chaque patient, et des soins à la hauteur de ce qui se pratique à l'hôpital.</p>
+        <span class="kicker" data-index="05" data-anim="fade-up" data-i18n="fnd.kicker">Le fondateur</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="fnd.title">Logan Mulyk,<br><span class="it">l'exigence du soin</span></h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="fnd.lead">Physiothérapeute et étudiant en médecine, Logan a monté Toukin autour d'une idée simple : des thérapeutes qui se parlent, du temps pour chaque patient, et des soins à la hauteur de ce qui se pratique à l'hôpital.</p>
         <ul class="feature-list" data-stagger data-anim="fade">
-          <li><span class="n">✦</span><div><b>Formation médicale continue</b><p>Études de médecine en cours — une approche du corps fondée sur les preuves et constamment actualisée.</p></div></li>
-          <li><span class="n">✦</span><div><b>Collaboration hospitalière</b><p>Partenariats avec l'Hôpital de Morges, en chirurgie orthopédique et prise en charge de la douleur.</p></div></li>
-          <li><span class="n">✦</span><div><b>Une expérience plurielle</b><p>Orthopédie, oncologie, physio respiratoire, psychiatrie et accompagnement de clubs sportifs.</p></div></li>
+          <li><span class="n">✦</span><div><b data-i18n="fnd.f1b">Formation médicale continue</b><p data-i18n="fnd.f1p">Études de médecine en cours — une approche du corps fondée sur les preuves et constamment actualisée.</p></div></li>
+          <li><span class="n">✦</span><div><b data-i18n="fnd.f2b">Collaboration hospitalière</b><p data-i18n="fnd.f2p">Partenariats avec l'Hôpital de Morges, en chirurgie orthopédique et prise en charge de la douleur.</p></div></li>
+          <li><span class="n">✦</span><div><b data-i18n="fnd.f3b">Une expérience plurielle</b><p data-i18n="fnd.f3p">Orthopédie, oncologie, physio respiratoire, psychiatrie et accompagnement de clubs sportifs.</p></div></li>
         </ul>
-        <blockquote class="founder-quote" data-anim="fade-up">« J'ai voulu créer le centre où j'aurais moi-même aimé être soigné : on prend le temps de vous expliquer, on ne vous presse jamais, et chacun tire dans le même sens. »</blockquote>
+        <blockquote class="founder-quote" data-anim="fade-up" data-i18n="fnd.quote">« J'ai voulu créer le centre où j'aurais moi-même aimé être soigné : on prend le temps de vous expliquer, on ne vous presse jamais, et chacun tire dans le même sens. »</blockquote>
         <p class="founder-also" data-anim="fade-up">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3"/></svg>
-          Consulte également au <strong>Pôle Santé d'Etagnières</strong> · Chemin de l'Etang 7, 1037 Etagnières
+          <span data-i18n="fnd.also">Consulte également au <strong>Pôle Santé d'Etagnières</strong> · Chemin de l'Etang 7, 1037 Etagnières</span>
         </p>
       </div>
     </div>
@@ -369,10 +381,10 @@
   <section class="section tight dark">
     <div class="wrap">
       <div class="band-grid" data-stagger data-anim="fade">
-        <div class="b"><strong data-count="5.0">5.0</strong><span>Note moyenne ★</span></div>
-        <div class="b"><strong data-count="2" data-suffix="">2</strong><span>Lieux de consultation</span></div>
-        <div class="b"><strong data-count="16" data-suffix="">16</strong><span>Domaines de prise en charge</span></div>
-        <div class="b"><strong data-count="100" data-suffix="%">100%</strong><span>Soins personnalisés</span></div>
+        <div class="b"><strong data-count="5.0">5.0</strong><span data-i18n="band.1">Note moyenne ★</span></div>
+        <div class="b"><strong data-count="2" data-suffix="">2</strong><span data-i18n="band.2">Lieux de consultation</span></div>
+        <div class="b"><strong data-count="16" data-suffix="">16</strong><span data-i18n="band.3">Domaines de prise en charge</span></div>
+        <div class="b"><strong data-count="100" data-suffix="%">100%</strong><span data-i18n="band.4">Soins personnalisés</span></div>
       </div>
     </div>
   </section>
@@ -381,26 +393,26 @@
   <section class="section soft" id="cours">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="06" data-anim="fade-up">Bouger ensemble</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Cours collectifs &amp; prévention</h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">Au-delà du soin individuel, des cours en groupe pour entretenir mobilité, force et bien-être.</p>
+        <span class="kicker" data-index="06" data-anim="fade-up" data-i18n="crs.kicker">Bouger ensemble</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="crs.title">Cours collectifs &amp; prévention</h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="crs.lead">Au-delà du soin individuel, des cours en groupe pour entretenir mobilité, force et bien-être.</p>
       </div>
       <div class="classes-grid" data-stagger data-anim="fade">
         <article class="class-card">
           <div class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="5" r="2.2"/><path d="M12 8v6m0 0-3 5m3-5 3 5M7 11h10" stroke-linecap="round"/></svg></div>
-          <h3>Yoga</h3><p>Souplesse, respiration et ancrage corporel.</p>
+          <h3 data-i18n="crs.yoga.h">Yoga</h3><p data-i18n="crs.yoga.p">Souplesse, respiration et ancrage corporel.</p>
         </article>
         <article class="class-card">
           <div class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 16c4-1 6-4 8-4s4 3 8 4M4 12c4-1 6-4 8-4s4 3 8 4" stroke-linecap="round"/></svg></div>
-          <h3>Pilates</h3><p>Gainage profond et contrôle du mouvement.</p>
+          <h3 data-i18n="crs.pilates.h">Pilates</h3><p data-i18n="crs.pilates.p">Gainage profond et contrôle du mouvement.</p>
         </article>
         <article class="class-card">
           <div class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 12h12M6 9v6M18 9v6M3 11v2M21 11v2" stroke-linecap="round"/></svg></div>
-          <h3>Renforcement</h3><p>Force et stabilité pour prévenir les blessures.</p>
+          <h3 data-i18n="crs.renf.h">Renforcement</h3><p data-i18n="crs.renf.p">Force et stabilité pour prévenir les blessures.</p>
         </article>
         <article class="class-card">
           <div class="c-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.5-9-9a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c-2 4.5-9 9-9 9z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Gym seniors</h3><p>Mobilité et équilibre en douceur, à tout âge.</p>
+          <h3 data-i18n="crs.seniors.h">Gym seniors</h3><p data-i18n="crs.seniors.p">Mobilité et équilibre en douceur, à tout âge.</p>
         </article>
       </div>
     </div>
@@ -410,17 +422,17 @@
   <section class="section">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="07" data-anim="fade-up">Témoignages</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Ils nous font confiance</h2>
+        <span class="kicker" data-index="07" data-anim="fade-up" data-i18n="rev.kicker">Témoignages</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="rev.title">Ils nous font confiance</h2>
       </div>
       <div class="reviews-grid" data-stagger data-anim="fade" style="grid-template-columns:minmax(0,640px);">
         <article class="review">
           <div class="q">“</div><div class="stars">★★★★★</div>
-          <p>« Vraiment incomparable. » Compétences, formations continues, empathie, infrastructure et parking : tout y est.</p>
-          <div class="who"><span class="av">✓</span><div><b>Patient vérifié</b><small>Avis vérifié · 5,0 ★</small></div></div>
+          <p data-i18n="rev.text">« Vraiment incomparable. » Compétences, formations continues, empathie, infrastructure et parking : tout y est.</p>
+          <div class="who"><span class="av">✓</span><div><b data-i18n="rev.whoB">Patient vérifié</b><small data-i18n="rev.whoS">Avis vérifié · 5,0 ★</small></div></div>
         </article>
       </div>
-      <p class="reviews-more" data-anim="fade-up" style="margin-top:26px;color:var(--muted);font-size:.98rem;">
+      <p class="reviews-more" data-anim="fade-up" data-i18n="rev.more" style="margin-top:26px;color:var(--muted);font-size:.98rem;">
         Note <strong style="color:var(--black)">5,0 ★</strong> · <a href="https://www.local.ch/fr/d/tolochenaz/1131/physiotherapie/toukin-iG1-7lVRvSLR1t844qLoPg" target="_blank" rel="noopener" style="color:var(--amber);font-weight:600">Lire &amp; laisser un avis</a>
       </p>
     </div>
@@ -430,46 +442,46 @@
   <section class="section soft" id="social">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="08" data-anim="fade-up">Suivez-nous</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Toukin sur les réseaux</h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">Conseils, exercices, coulisses du centre et actualités du collectif.</p>
+        <span class="kicker" data-index="08" data-anim="fade-up" data-i18n="soc.kicker">Suivez-nous</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="soc.title">Toukin sur les réseaux</h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="soc.lead">Conseils, exercices, coulisses du centre et actualités du collectif.</p>
       </div>
       <div class="social-grid" data-stagger data-anim="fade">
         <a class="social-card" href="https://www.instagram.com/physiotherapeute_toukin" target="_blank" rel="noopener">
           <div class="s-ic ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
           <h3>Instagram</h3><div class="handle">@physiotherapeute_toukin</div>
-          <p>Exercices, conseils prévention et vie du centre.</p>
-          <span class="go">Suivre <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p data-i18n="soc.ig.p">Exercices, conseils prévention et vie du centre.</p>
+          <span class="go"><span data-i18n="soc.ig.go">Suivre</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
         <a class="social-card" href="https://youtube.com/@toukinphysio" target="_blank" rel="noopener">
           <div class="s-ic yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.45-5.18a2.78 2.78 0 0 0-1.95-1.96C18.88 4.4 12 4.4 12 4.4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.45 6.82 29 29 0 0 0 1 12a29 29 0 0 0 .45 5.18 2.78 2.78 0 0 0 1.95 1.96C5.12 19.6 12 19.6 12 19.6s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.95-1.96C23 15.5 23 12 23 12zM9.75 15.27V8.73L15.5 12z"/></svg></div>
           <h3>YouTube</h3><div class="handle">@toukinphysio</div>
-          <p>Vidéos d'exercices et de conseils pour bouger mieux.</p>
-          <span class="go">Regarder <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p data-i18n="soc.yt.p">Vidéos d'exercices et de conseils pour bouger mieux.</p>
+          <span class="go"><span data-i18n="soc.yt.go">Regarder</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
         <a class="social-card" href="https://www.facebook.com/share/1b6coKMSzt/" target="_blank" rel="noopener">
           <div class="s-ic fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H18V.2C17.6.1 16.3 0 14.9 0 11.9 0 10 1.7 10 4.9V6H7v3h3v9h4z"/></svg></div>
-          <h3>Facebook</h3><div class="handle">Collectif santé Toukin</div>
-          <p>Actualités, événements et nouveautés du collectif.</p>
-          <span class="go">Aimer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Facebook</h3><div class="handle" data-i18n="soc.fb.handle">Collectif santé Toukin</div>
+          <p data-i18n="soc.fb.p">Actualités, événements et nouveautés du collectif.</p>
+          <span class="go"><span data-i18n="soc.fb.go">Aimer</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
         <a class="social-card" href="https://www.linkedin.com/company/toukin/" target="_blank" rel="noopener">
           <div class="s-ic li"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8h4V24h-4zM8 8h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4 0 4.75 2.65 4.75 6.1V24h-4v-7c0-1.67-.03-3.8-2.32-3.8-2.32 0-2.68 1.8-2.68 3.68V24H8z"/></svg></div>
           <h3>LinkedIn</h3><div class="handle">Toukin</div>
-          <p>Le collectif, son équipe et ses projets.</p>
-          <span class="go">Se connecter <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p data-i18n="soc.li.p">Le collectif, son équipe et ses projets.</p>
+          <span class="go"><span data-i18n="soc.li.go">Se connecter</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
       </div>
 
-      <a class="video-feature" href="https://youtube.com/@toukinphysio" target="_blank" rel="noopener" data-anim="fade" aria-label="Voir les vidéos de Toukin sur YouTube">
+      <a class="video-feature" href="https://youtube.com/@toukinphysio" target="_blank" rel="noopener" data-anim="fade" data-i18n-aria="soc.vf.aria" aria-label="Voir les vidéos de Toukin sur YouTube">
         <img src="assets/photos/video.jpg" alt="Accueil du centre Toukin — chaîne YouTube Toukin Physio" loading="lazy"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80'" />
         <div class="vf-overlay"></div>
         <span class="vf-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         <div class="vf-text">
           <span class="vf-tag">YouTube · @toukinphysio</span>
-          <h3>Exercices &amp; conseils en vidéo</h3>
-          <p>Nos routines de mobilité, de renforcement et nos conseils prévention.</p>
+          <h3 data-i18n="soc.vf.h">Exercices &amp; conseils en vidéo</h3>
+          <p data-i18n="soc.vf.p">Nos routines de mobilité, de renforcement et nos conseils prévention.</p>
         </div>
       </a>
     </div>
@@ -479,48 +491,48 @@
   <section class="section" id="faq">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="09" data-anim="fade-up">Bon à savoir</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Praticité &amp; questions fréquentes</h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">L'essentiel à connaître avant votre première séance, en toute transparence.</p>
+        <span class="kicker" data-index="09" data-anim="fade-up" data-i18n="faq.kicker">Bon à savoir</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="faq.title">Praticité &amp; questions fréquentes</h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="faq.lead">L'essentiel à connaître avant votre première séance, en toute transparence.</p>
       </div>
 
       <div class="trust-grid" data-stagger data-anim="fade">
-        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b>Avec ou sans ordonnance</b><span>Accès direct possible</span></div>
-        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b>Conventionné assurances</b><span>Remboursement sur prescription</span></div>
-        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b>Nouveaux patients bienvenus</b><span>Sur 2 sites de consultation</span></div>
-        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20" stroke-linecap="round"/></svg></div><b>Espèces · Facture · TWINT</b><span>Paiement flexible</span></div>
-        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="9" r="2.4"/><path d="M7 19a5 5 0 0 1 10 0" stroke-linecap="round"/></svg></div><b>Accès PMR &amp; parking</b><span>Proche transports &amp; lac</span></div>
-        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke-linecap="round"/></svg></div><b>Français &amp; anglais</b><span>Une équipe à votre écoute</span></div>
+        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b data-i18n="trust.1b">Avec ou sans ordonnance</b><span data-i18n="trust.1s">Accès direct possible</span></div>
+        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b data-i18n="trust.2b">Conventionné assurances</b><span data-i18n="trust.2s">Remboursement sur prescription</span></div>
+        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b data-i18n="trust.3b">Nouveaux patients bienvenus</b><span data-i18n="trust.3s">Sur 2 sites de consultation</span></div>
+        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20" stroke-linecap="round"/></svg></div><b data-i18n="trust.4b">Espèces · Facture · TWINT</b><span data-i18n="trust.4s">Paiement flexible</span></div>
+        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="9" r="2.4"/><path d="M7 19a5 5 0 0 1 10 0" stroke-linecap="round"/></svg></div><b data-i18n="trust.5b">Accès PMR &amp; parking</b><span data-i18n="trust.5s">Proche transports &amp; lac</span></div>
+        <div class="trust"><div class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" stroke-linecap="round"/></svg></div><b data-i18n="trust.6b">Français &amp; anglais</b><span data-i18n="trust.6s">Une équipe à votre écoute</span></div>
       </div>
 
       <div class="faq" data-anim="fade-up" data-delay="1">
         <details class="faq-item" open>
-          <summary>Ai-je besoin d'une ordonnance pour consulter ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Pas forcément : nous recevons les patients avec ou sans prescription médicale. Pour un remboursement par l'assurance de base (LAMal), une ordonnance de votre médecin est en revanche nécessaire.</p></div>
+          <summary><span data-i18n="faq.q1">Ai-je besoin d'une ordonnance pour consulter ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a1">Pas forcément : nous recevons les patients avec ou sans prescription médicale. Pour un remboursement par l'assurance de base (LAMal), une ordonnance de votre médecin est en revanche nécessaire.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Êtes-vous conventionnés et remboursés par les assurances ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Oui. Nos prestations de physiothérapie sont reconnues et prises en charge par les assurances sur prescription médicale. N'hésitez pas à nous contacter pour toute question sur votre couverture.</p></div>
+          <summary><span data-i18n="faq.q2">Êtes-vous conventionnés et remboursés par les assurances ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a2">Oui. Nos prestations de physiothérapie sont reconnues et prises en charge par les assurances sur prescription médicale. N'hésitez pas à nous contacter pour toute question sur votre couverture.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Comment prendre rendez-vous ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Le plus simple est la réservation en ligne, disponible 24h/24 via le bouton « Prendre rendez-vous ». Vous pouvez aussi nous joindre par téléphone au 078 240 13 95 ou par e-mail à toukin@physio-hin.ch.</p></div>
+          <summary><span data-i18n="faq.q3">Comment prendre rendez-vous ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a3">Le plus simple est la réservation en ligne, disponible 24h/24 via le bouton « Prendre rendez-vous ». Vous pouvez aussi nous joindre par téléphone au 078 240 13 95 ou par e-mail à toukin@physio-hin.ch.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Acceptez-vous de nouveaux patients ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Oui, nous accueillons volontiers de nouveaux patients, à Tolochenaz comme au Pôle Santé d'Etagnières. Réservez simplement le créneau qui vous convient.</p></div>
+          <summary><span data-i18n="faq.q4">Acceptez-vous de nouveaux patients ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a4">Oui, nous accueillons volontiers de nouveaux patients, à Tolochenaz comme au Pôle Santé d'Etagnières. Réservez simplement le créneau qui vous convient.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Proposez-vous des séances à domicile ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Oui, des prises en charge à domicile sont possibles selon votre situation. Parlez-nous-en lors de la prise de rendez-vous afin d'organiser l'intervention.</p></div>
+          <summary><span data-i18n="faq.q5">Proposez-vous des séances à domicile ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a5">Oui, des prises en charge à domicile sont possibles selon votre situation. Parlez-nous-en lors de la prise de rendez-vous afin d'organiser l'intervention.</p></div>
         </details>
         <details class="faq-item">
-          <summary>Quels moyens de paiement acceptez-vous ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Espèces, facture et TWINT. Le règlement s'effectue en francs suisses (CHF).</p></div>
+          <summary><span data-i18n="faq.q6">Quels moyens de paiement acceptez-vous ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a6">Espèces, facture et TWINT. Le règlement s'effectue en francs suisses (CHF).</p></div>
         </details>
         <details class="faq-item">
-          <summary>Dans quelles langues êtes-vous disponibles ?<span class="faq-x" aria-hidden="true"></span></summary>
-          <div class="faq-a"><p>Nous vous accueillons en français et en anglais.</p></div>
+          <summary><span data-i18n="faq.q7">Dans quelles langues êtes-vous disponibles ?</span><span class="faq-x" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p data-i18n="faq.a7">Nous vous accueillons en français et en anglais.</p></div>
         </details>
       </div>
     </div>
@@ -532,15 +544,15 @@
     <img class="cta-emblem" src="assets/emblem-light.svg" alt="" aria-hidden="true" />
     <div class="wrap">
       <div>
-        <h2 data-anim="fade-up">Faisons le premier pas<br><span class="it" style="font-style:italic;color:var(--amber)">ensemble</span>.</h2>
-        <p data-anim="fade-up" data-delay="1">Première séance réservable en ligne, avec ou sans ordonnance — à Tolochenaz comme à Etagnières.</p>
+        <h2 data-anim="fade-up" data-i18n="cta.h">Faisons le premier pas<br><span class="it" style="font-style:italic;color:var(--amber)">ensemble</span>.</h2>
+        <p data-anim="fade-up" data-delay="1" data-i18n="cta.p">Première séance réservable en ligne, avec ou sans ordonnance — à Tolochenaz comme à Etagnières.</p>
       </div>
       <div class="cta-actions" data-anim="fade-up" data-delay="2">
         <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
-          <span>Prendre rendez-vous</span>
+          <span data-i18n="nav.book">Prendre rendez-vous</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost"><span>Nous écrire</span></a>
+        <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost"><span data-i18n="nav.write">Nous écrire</span></a>
       </div>
     </div>
   </section>
@@ -549,53 +561,53 @@
   <section class="section soft" id="contact">
     <div class="wrap">
       <div class="s-head">
-        <span class="kicker" data-index="10" data-anim="fade-up">Nous trouver</span>
-        <h2 class="title" data-anim="fade-up" data-delay="1">Au cœur de Tolochenaz</h2>
-        <p class="lead" data-anim="fade-up" data-delay="2">À deux pas de la gare et du lac de Morges. Réservez en ligne, ou écrivez-nous : on répond vite.</p>
+        <span class="kicker" data-index="10" data-anim="fade-up" data-i18n="con.kicker">Nous trouver</span>
+        <h2 class="title" data-anim="fade-up" data-delay="1" data-i18n="con.title">Au cœur de Tolochenaz</h2>
+        <p class="lead" data-anim="fade-up" data-delay="2" data-i18n="con.lead">À deux pas de la gare et du lac de Morges. Réservez en ligne, ou écrivez-nous : on répond vite.</p>
       </div>
       <div class="contact-grid">
         <div class="info-card" data-anim="fade-up">
           <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><h4>Adresse</h4><p>Route de Genève 32C<br>1131 Tolochenaz (VD), Suisse</p></div>
+            <div><h4 data-i18n="con.addressH">Adresse</h4><p data-i18n="con.address">Route de Genève 32C<br>1131 Tolochenaz (VD), Suisse</p></div>
           </div>
           <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><h4>Téléphone</h4><a href="tel:+41782401395">078 240 13 95</a></div>
+            <div><h4 data-i18n="con.phoneH">Téléphone</h4><a href="tel:+41782401395">078 240 13 95</a></div>
           </div>
           <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><h4>E-mail</h4><a href="mailto:toukin@physio-hin.ch">toukin@physio-hin.ch</a></div>
+            <div><h4 data-i18n="con.emailH">E-mail</h4><a href="mailto:toukin@physio-hin.ch">toukin@physio-hin.ch</a></div>
           </div>
           <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div style="flex:1"><h4>Horaires</h4>
+            <div style="flex:1"><h4 data-i18n="con.hoursH">Horaires</h4>
               <div class="hours-list">
-                <div><span>Lundi – Jeudi</span><span>08:00 – 18:30</span></div>
-                <div><span>Vendredi</span><span>08:00 – 17:30</span></div>
-                <div><span>Samedi – Dimanche</span><span>Sur rendez-vous</span></div>
+                <div><span data-i18n="con.hMon">Lundi – Jeudi</span><span>08:00 – 18:30</span></div>
+                <div><span data-i18n="con.hFri">Vendredi</span><span>08:00 – 17:30</span></div>
+                <div><span data-i18n="con.hWe">Samedi – Dimanche</span><span data-i18n="con.hWeVal">Sur rendez-vous</span></div>
               </div>
             </div>
           </div>
           <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <div><h4>Infos pratiques</h4><p>Paiement : espèces · facture · TWINT<br>Accès PMR &amp; parking · proche des transports &amp; du lac · FR / EN</p></div>
+            <div><h4 data-i18n="con.practH">Infos pratiques</h4><p data-i18n="con.pract">Paiement : espèces · facture · TWINT<br>Accès PMR &amp; parking · proche des transports &amp; du lac · FR / EN</p></div>
           </div>
           <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><h4>2ᵉ lieu de consultation</h4><p>Pôle Santé d'Etagnières<br>Chemin de l'Etang 7, 1037 Etagnières (VD)</p></div>
+            <div><h4 data-i18n="con.secondH">2ᵉ lieu de consultation</h4><p data-i18n="con.second">Pôle Santé d'Etagnières<br>Chemin de l'Etang 7, 1037 Etagnières (VD)</p></div>
           </div>
           <div class="contact-cta">
             <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
-              <span>Réserver en ligne</span>
+              <span data-i18n="hero.reserve">Réserver en ligne</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a href="tel:+41782401395" class="btn btn-ghost"><span>Appeler</span></a>
-            <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost"><span>Nous écrire</span></a>
+            <a href="tel:+41782401395" class="btn btn-ghost"><span data-i18n="con.call">Appeler</span></a>
+            <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost"><span data-i18n="nav.write">Nous écrire</span></a>
           </div>
         </div>
         <div class="map-card" data-anim="fade-up" data-delay="1">
-          <iframe title="Carte — Toukin, Route de Genève 32C, Tolochenaz" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          <iframe data-i18n-title="con.mapTitle" title="Carte — Toukin, Route de Genève 32C, Tolochenaz" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Route+de+Gen%C3%A8ve+32C,+1131+Tolochenaz,+Suisse&output=embed"></iframe>
         </div>
       </div>
@@ -608,7 +620,7 @@
       <div class="footer-grid">
         <div class="f-brand">
           <span class="brand-wm light">t<span class="o"><svg viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="fm"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#fm)"><rect width="100" height="100" fill="#fff"/><rect y="50" width="50" height="50" fill="#1C1B1A"/><rect x="50" width="50" height="50" fill="#1C1B1A"/><rect x="50" width="37" height="50" fill="#F5A623"/><circle cx="30" cy="27" r="7.4" fill="#1C1B1A"/></g></svg></span>ukin</span>
-          <p>Collectif santé pluridisciplinaire à Tolochenaz et Etagnières. Physiothérapie, ostéopathie et préparation physique, par une équipe qui prend le temps.</p>
+          <p data-i18n="ft.desc">Collectif santé pluridisciplinaire à Tolochenaz et Etagnières. Physiothérapie, ostéopathie et préparation physique, par une équipe qui prend le temps.</p>
           <div class="f-social">
             <a href="https://www.instagram.com/physiotherapeute_toukin" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://youtube.com/@toukinphysio" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.5-.45-5.18a2.78 2.78 0 0 0-1.95-1.96C18.88 4.4 12 4.4 12 4.4s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.45 6.82 29 29 0 0 0 1 12a29 29 0 0 0 .45 5.18 2.78 2.78 0 0 0 1.95 1.96C5.12 19.6 12 19.6 12 19.6s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.95-1.96C23 15.5 23 12 23 12zM9.75 15.27V8.73L15.5 12z"/></svg></a>
@@ -617,32 +629,32 @@
           </div>
         </div>
         <div>
-          <h5>Soins</h5>
+          <h5 data-i18n="ft.careH">Soins</h5>
           <ul>
-            <li><a href="#services">Physiothérapie</a></li>
-            <li><a href="#services">Ostéopathie</a></li>
-            <li><a href="#services">Préparation physique</a></li>
-            <li><a href="#services">Massages &amp; nutrition</a></li>
+            <li><a href="#services" data-i18n="ft.care1">Physiothérapie</a></li>
+            <li><a href="#services" data-i18n="ft.care2">Ostéopathie</a></li>
+            <li><a href="#services" data-i18n="ft.care3">Préparation physique</a></li>
+            <li><a href="#services" data-i18n="ft.care4">Massages &amp; nutrition</a></li>
           </ul>
         </div>
         <div>
-          <h5>Le centre</h5>
+          <h5 data-i18n="ft.centerH">Le centre</h5>
           <ul>
-            <li><a href="#approche">Notre approche</a></li>
-            <li><a href="#fondateur">Le fondateur</a></li>
-            <li><a href="#equipe">L'équipe</a></li>
-            <li><a href="#centre">Nos espaces</a></li>
-            <li><a href="#cours">Cours collectifs</a></li>
-            <li><a href="#faq">Questions fréquentes</a></li>
+            <li><a href="#approche" data-i18n="ft.center1">Notre approche</a></li>
+            <li><a href="#fondateur" data-i18n="ft.center2">Le fondateur</a></li>
+            <li><a href="#equipe" data-i18n="ft.center3">L'équipe</a></li>
+            <li><a href="#centre" data-i18n="ft.center4">Nos espaces</a></li>
+            <li><a href="#cours" data-i18n="ft.center5">Cours collectifs</a></li>
+            <li><a href="#faq" data-i18n="ft.center6">Questions fréquentes</a></li>
           </ul>
         </div>
         <div>
-          <h5>Contact</h5>
+          <h5 data-i18n="ft.contactH">Contact</h5>
           <ul>
             <li><a href="https://maps.google.com/?q=Route+de+Genève+32C,+1131+Tolochenaz" target="_blank" rel="noopener">Route de Genève 32C<br>1131 Tolochenaz</a></li>
             <li><a href="tel:+41782401395">078 240 13 95</a></li>
             <li><a href="mailto:toukin@physio-hin.ch">toukin@physio-hin.ch</a></li>
-            <li><a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
+            <li><a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" data-i18n="nav.book">Prendre rendez-vous</a></li>
           </ul>
         </div>
       </div>
@@ -650,11 +662,11 @@
         <img src="assets/emblem-light.svg" alt="Toukin · Physiothérapie · Tolochenaz" />
       </div>
       <div class="footer-bottom">
-        <span>© <span id="year">2026</span> Toukin — Collectif santé · Tolochenaz (VD), Suisse</span>
-        <span class="f-mid">Entre lac et vignoble, à Tolochenaz · 5,0 ★</span>
+        <span>© <span id="year">2026</span> <span data-i18n="ft.copy">Toukin — Collectif santé · Tolochenaz (VD), Suisse</span></span>
+        <span class="f-mid" data-i18n="ft.mid">Entre lac et vignoble, à Tolochenaz · 5,0 ★</span>
         <a class="credit dc-sign" href="https://www.digitalconcept.be" target="_blank" rel="noopener" aria-label="Conçu et développé par Digital Concept">
           <span class="dc-mark" aria-hidden="true"><i class="dc-dot"></i><span class="dc-d">D</span><span class="dc-c">C</span></span>
-          <span class="dc-by">Conçu &amp; développé par <b class="dg">Digital</b> <b class="cc">Concept</b></span>
+          <span class="dc-by"><span data-i18n="ft.by">Conçu &amp; développé par</span> <b class="dg">Digital</b> <b class="cc">Concept</b></span>
         </a>
       </div>
     </div>
@@ -666,7 +678,7 @@
     <a class="mb-call" href="tel:+41782401395" aria-label="Appeler le centre">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <a class="mb-book" href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener"><span>Réserver</span>
+    <a class="mb-book" href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener"><span data-i18n="mb.book">Réserver</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
   </div>
@@ -675,6 +687,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
+  <script src="js/i18n.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>

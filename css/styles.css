@@ -681,3 +681,24 @@ body.menu-open { overflow: hidden; }
   .to-top { bottom: calc(82px + env(safe-area-inset-bottom)); }
   .footer { padding-bottom: calc(104px + env(safe-area-inset-bottom)); }
 }
+
+/* ============ Sélecteur de langue (FR / EN / DE) ============ */
+.lang-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px;
+  border: 1.5px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.45); }
+.lang-switch button { font-family: var(--sans); font-weight: 700; font-size: .74rem; letter-spacing: .04em;
+  color: var(--muted); background: none; border: 0; cursor: pointer; padding: 5px 9px; border-radius: 999px;
+  line-height: 1; transition: color .25s var(--ease), background .25s var(--ease); }
+.lang-switch button:hover { color: var(--black); }
+.lang-switch button.active { background: var(--amber); color: var(--black); }
+.header.scrolled .lang-switch { background: rgba(255,255,255,.6); }
+/* Variante affichée uniquement dans le menu mobile plein écran */
+.lang-switch--menu { display: none; }
+
+@media (max-width: 880px) {
+  /* Sélecteur compact à côté du burger, toujours visible */
+  .nav-cta .lang-switch { padding: 2px; }
+  .nav-cta .lang-switch button { padding: 5px 7px; font-size: .72rem; }
+  /* Grand sélecteur dans le menu ouvert */
+  .nav-links .lang-switch--menu { display: inline-flex; position: relative; z-index: 1; margin-top: 26px; padding: 5px; }
+  .nav-links .lang-switch--menu button { font-size: 1rem; padding: 10px 18px; }
+}

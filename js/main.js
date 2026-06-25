@@ -177,10 +177,14 @@
   safe(() => {
     const TEL = '+41782401395', TELDISP = '078 240 13 95';
     const PHONE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-    const days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    /* i18n : repli français si le moteur i18n n'est pas chargé */
+    const FR = { 'pill.open':'Ouvert · ferme à {t}','pill.openShort':'Ouvert','pill.closed':'Fermé','pill.opens':'Ouvre {when}','pill.today':"aujourd'hui à {t}",'pill.tomorrow':'demain à {t}','pill.weekday':'{day} à {t}','pill.ariaOpen':'Centre ouvert — appeler le {tel}','pill.ariaClosed':'Centre fermé — ouvre {when}','pill.barAriaOpen':'Centre ouvert, ferme à {t}','pill.barAriaClosed':'Centre fermé, ouvre {when}','day.0':'dimanche','day.1':'lundi','day.2':'mardi','day.3':'mercredi','day.4':'jeudi','day.5':'vendredi','day.6':'samedi' };
+    const L = (k) => (window.I18N ? window.I18N.t(k) : FR[k]) || k;
+    const curLang = () => (window.I18N ? window.I18N.lang : 'fr');
+    const dayName = (d) => L('day.' + d);
     const OPEN = 480; // 08:00
     const closeFor = (d) => (d >= 1 && d <= 4) ? 1110 : (d === 5 ? 1050 : null); // Lun–Jeu 18h30, Ven 17h30
-    const fmt = (mins) => Math.floor(mins / 60) + 'h' + String(mins % 60).padStart(2, '0');
+    const fmt = (mins) => { const h = Math.floor(mins / 60), m = String(mins % 60).padStart(2, '0'); return curLang() === 'fr' ? (h + 'h' + m) : (h + ':' + m); };
 
     const now = () => {
       try {
@@ -213,26 +217,27 @@
       let when = '';
       if (open) {
         pill.href = 'tel:' + TEL;
-        pill.setAttribute('aria-label', 'Centre ouvert — appeler le ' + TELDISP);
-        state.textContent = 'Ouvert · ferme à ' + fmt(close);
+        pill.setAttribute('aria-label', L('pill.ariaOpen').replace('{tel}', TELDISP));
+        state.textContent = L('pill.open').replace('{t}', fmt(close));
         sub.innerHTML = PHONE_SVG + TELDISP;
       } else {
         let target = { d: 1, ahead: 1 };
         if (close !== null && cur < OPEN) target = { d: day, ahead: 0 };
         else for (let i = 1; i <= 7; i++) { const d = (day + i) % 7; if (closeFor(d) !== null) { target = { d, ahead: i }; break; } }
-        when = target.ahead === 0 ? "aujourd'hui à " + fmt(OPEN)
-          : target.ahead === 1 ? 'demain à ' + fmt(OPEN)
-          : days[target.d] + ' à ' + fmt(OPEN);
+        const t = fmt(OPEN);
+        when = target.ahead === 0 ? L('pill.today').replace('{t}', t)
+          : target.ahead === 1 ? L('pill.tomorrow').replace('{t}', t)
+          : L('pill.weekday').replace('{day}', dayName(target.d)).replace('{t}', t);
         pill.href = '#contact';
-        pill.setAttribute('aria-label', 'Centre fermé — ouvre ' + when);
-        state.textContent = 'Fermé';
-        sub.textContent = 'Ouvre ' + when;
+        pill.setAttribute('aria-label', L('pill.ariaClosed').replace('{when}', when));
+        state.textContent = L('pill.closed');
+        sub.textContent = L('pill.opens').replace('{when}', when);
       }
       if (bar) {
         bar.classList.toggle('open', open);
         bar.classList.toggle('closed', !open);
-        barState.textContent = open ? 'Ouvert' : 'Fermé';
-        barStatus.setAttribute('aria-label', open ? ('Centre ouvert, ferme à ' + fmt(close)) : ('Centre fermé, ouvre ' + when));
+        barState.textContent = open ? L('pill.openShort') : L('pill.closed');
+        barStatus.setAttribute('aria-label', open ? L('pill.barAriaOpen').replace('{t}', fmt(close)) : L('pill.barAriaClosed').replace('{when}', when));
       }
     };
 
@@ -240,16 +245,18 @@
     setTimeout(() => pill.classList.add('show'), 700);
     setInterval(render, 60000);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
+    document.addEventListener('toukin:langchange', render); // re-rend au changement de langue
   });
 
   /* ---- Lightbox galerie (clic / Entrée pour agrandir) ---- */
   safe(() => {
     const items = $$('.gallery .g-item');
     if (!items.length) return;
+    const tr = (k) => (window.I18N ? window.I18N.t(k) : null);
     const lb = document.createElement('div');
     lb.className = 'lightbox';
     lb.setAttribute('aria-hidden', 'true');
-    lb.innerHTML = '<button class="lb-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button><figure><img alt=""><figcaption></figcaption></figure>';
+    lb.innerHTML = '<button class="lb-close" aria-label="' + (tr('lb.close') || 'Fermer') + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button><figure><img alt=""><figcaption></figcaption></figure>';
     document.body.appendChild(lb);
     const lbImg = lb.querySelector('img'), lbCap = lb.querySelector('figcaption');
     const openLb = (src, alt, cap) => { lbImg.src = src; lbImg.alt = alt || ''; lbCap.textContent = cap || ''; lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; };
@@ -258,7 +265,7 @@
       const img = it.querySelector('img'); if (!img) return;
       const cap = it.querySelector('figcaption');
       it.setAttribute('tabindex', '0'); it.setAttribute('role', 'button');
-      it.setAttribute('aria-label', 'Agrandir : ' + (cap ? cap.textContent : (img.alt || 'photo')));
+      it.setAttribute('aria-label', (tr('lb.zoom') || 'Agrandir : ') + (cap ? cap.textContent : (img.alt || (tr('lb.photo') || 'photo'))));
       const go = () => openLb(img.currentSrc || img.src, img.alt, cap ? cap.textContent : '');
       it.addEventListener('click', go);
       it.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
