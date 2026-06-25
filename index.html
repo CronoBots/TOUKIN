@@ -26,12 +26,21 @@
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Toukin — Collectif santé",
-    "description": "Centre de soins pluridisciplinaire : physiothérapie, ostéopathie, préparation physique, massages thérapeutiques, nutrition et cours collectifs.",
+    "description": "Centre de soins pluridisciplinaire à Tolochenaz (VD) : physiothérapie, ostéopathie, préparation physique, massages thérapeutiques, nutrition et cours collectifs.",
     "image": "assets/emblem.svg",
+    "telephone": "+41782401395",
     "email": "toukin@physio-hin.ch",
     "address": { "@type": "PostalAddress", "streetAddress": "Route de Genève 32C", "postalCode": "1131", "addressLocality": "Tolochenaz", "addressRegion": "VD", "addressCountry": "CH" },
+    "openingHoursSpecification": [ { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" } ],
     "openingHours": "Mo-Fr 08:00-18:00",
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "20" },
+    "paymentAccepted": "Espèces, Facture, TWINT",
+    "currenciesAccepted": "CHF",
+    "areaServed": ["Tolochenaz", "Morges", "Vaud"],
+    "availableLanguage": ["fr", "en"],
+    "medicalSpecialty": "Physiotherapy",
+    "hasMap": "https://maps.google.com/?q=Route+de+Gen%C3%A8ve+32C,+1131+Tolochenaz",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "1", "bestRating": "5" },
+    "review": { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Patient vérifié" }, "reviewBody": "Vraiment incomparable — compétences, formations continues, empathie, infrastructure et parking." },
     "sameAs": [
       "https://www.instagram.com/physiotherapeute_toukin",
       "https://youtube.com/@toukinphysio",
@@ -248,8 +257,8 @@
           <div class="info">
             <h3>Logan Mulyk</h3>
             <div class="role">Physiothérapeute</div>
-            <p>Physiothérapie générale et sportive, respiratoire, prise en charge de la douleur chronique et du dos. Également à domicile.</p>
-            <div class="creds"><span>Physio sportive</span><span>Respiratoire</span><span>Douleur chronique</span><span>Dos</span><span>À domicile</span></div>
+            <p>Physiothérapie générale et sportive, respiratoire, douleur chronique et dos. Thérapie manuelle d'inspiration ostéopathique et dry needling. Également à domicile.</p>
+            <div class="creds"><span>Physio sportive</span><span>Thérapie manuelle</span><span>Dry needling</span><span>Douleur chronique</span><span>Dos</span><span>À domicile</span></div>
           </div>
         </article>
         <article class="member">
@@ -330,23 +339,16 @@
         <span class="kicker" data-index="06" data-anim="fade-up">Témoignages</span>
         <h2 class="title" data-anim="fade-up" data-delay="1">Ils nous font confiance</h2>
       </div>
-      <div class="reviews-grid" data-stagger data-anim="fade">
+      <div class="reviews-grid" data-stagger data-anim="fade" style="grid-template-columns:minmax(0,640px);justify-content:center;">
         <article class="review">
           <div class="q">“</div><div class="stars">★★★★★</div>
-          <p>Une prise en charge sérieuse et chaleureuse. J'ai enfin compris l'origine de mes douleurs et retrouvé ma mobilité.</p>
-          <div class="who"><span class="av">M</span><div><b>Marie L.</b><small>Patiente · Morges</small></div></div>
-        </article>
-        <article class="review">
-          <div class="q">“</div><div class="stars">★★★★★</div>
-          <p>Un centre moderne et une équipe à l'écoute. La combinaison physio + préparation physique a tout changé pour ma reprise du sport.</p>
-          <div class="who"><span class="av">T</span><div><b>Thomas R.</b><small>Patient · Tolochenaz</small></div></div>
-        </article>
-        <article class="review">
-          <div class="q">“</div><div class="stars">★★★★★</div>
-          <p>Accueil impeccable, locaux agréables et un vrai suivi. Je recommande Toukin à 100 %.</p>
-          <div class="who"><span class="av">S</span><div><b>Sophie B.</b><small>Patiente · Lausanne</small></div></div>
+          <p>« Vraiment incomparable. » Compétences, formations continues, empathie, infrastructure et parking : tout y est.</p>
+          <div class="who"><span class="av">✓</span><div><b>Patient vérifié</b><small>Avis vérifié · 5,0 ★</small></div></div>
         </article>
       </div>
+      <p class="reviews-more" data-anim="fade-up" style="text-align:center;margin-top:26px;color:var(--muted);font-size:.98rem;">
+        Note <strong style="color:var(--black)">5,0 ★</strong> · <a href="https://www.local.ch/fr/d/tolochenaz/1131/physiotherapie/toukin-iG1-7lVRvSLR1t844qLoPg" target="_blank" rel="noopener" style="color:var(--amber);font-weight:600">Lire &amp; laisser un avis</a>
+      </p>
     </div>
   </section>
 
@@ -433,6 +435,10 @@
             <div><h4>Adresse</h4><p>Route de Genève 32C<br>1131 Tolochenaz (VD), Suisse</p></div>
           </div>
           <div class="info-row">
+            <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>Téléphone</h4><a href="tel:+41782401395">078 240 13 95</a> · <a href="tel:+41446219540">044 621 95 40</a></div>
+          </div>
+          <div class="info-row">
             <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div><h4>E-mail</h4><a href="mailto:toukin@physio-hin.ch">toukin@physio-hin.ch</a></div>
           </div>
@@ -445,11 +451,16 @@
               </div>
             </div>
           </div>
+          <div class="info-row">
+            <div class="ir-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div><h4>Infos pratiques</h4><p>Paiement : espèces · facture · TWINT<br>Accès PMR &amp; parking · proche des transports &amp; du lac · FR / EN</p></div>
+          </div>
           <div class="contact-cta">
             <a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
               <span>Réserver en ligne</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
+            <a href="tel:+41782401395" class="btn btn-ghost"><span>Appeler</span></a>
             <a href="mailto:toukin@physio-hin.ch" class="btn btn-ghost"><span>Nous écrire</span></a>
           </div>
         </div>
@@ -497,6 +508,7 @@
           <h5>Contact</h5>
           <ul>
             <li><a href="https://maps.google.com/?q=Route+de+Genève+32C,+1131+Tolochenaz" target="_blank" rel="noopener">Route de Genève 32C<br>1131 Tolochenaz</a></li>
+            <li><a href="tel:+41782401395">078 240 13 95</a></li>
             <li><a href="mailto:toukin@physio-hin.ch">toukin@physio-hin.ch</a></li>
             <li><a href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener">Prendre rendez-vous</a></li>
           </ul>
