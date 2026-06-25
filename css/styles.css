@@ -510,6 +510,8 @@ body.menu-open { overflow: hidden; }
   background: var(--white); box-shadow: var(--shadow-sm); border-radius: 14px; padding: 14px 18px; }
 .founder-also svg { width: 20px; height: 20px; color: var(--amber-ink); flex: 0 0 auto; margin-top: 1px; }
 .founder-also strong { color: var(--black); }
+.founder-quote { margin: 28px 0 0; padding: 6px 0 6px 22px; border-left: 3px solid var(--amber);
+  font-family: var(--serif); font-style: italic; font-size: clamp(1.12rem, 1.9vw, 1.38rem); line-height: 1.42; color: var(--black); }
 
 /* ---- Trust grid ---- */
 .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: clamp(42px, 5vw, 66px); }
