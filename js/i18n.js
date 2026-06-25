@@ -3,7 +3,7 @@
 (() => {
   'use strict';
 
-  const SUPPORTED = ['fr', 'en', 'de'];
+  const SUPPORTED = ['fr', 'en'];
   const DEFAULT = 'fr';
   const STORE = 'toukin_lang';
 
@@ -451,7 +451,7 @@
     const md = document.querySelector('meta[name="description"]');
     if (md) md.setAttribute('content', t('doc.desc'));
     const ogl = document.querySelector('meta[property="og:locale"]');
-    if (ogl) ogl.setAttribute('content', lang === 'fr' ? 'fr_CH' : (lang === 'de' ? 'de_CH' : 'en_CH'));
+    if (ogl) ogl.setAttribute('content', lang === 'fr' ? 'fr_CH' : 'en_CH');
 
     document.querySelectorAll('[data-i18n]').forEach(el => { el.innerHTML = t(el.getAttribute('data-i18n')); });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => { el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria'))); });
