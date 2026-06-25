@@ -364,7 +364,10 @@ h1,h2,h3,h4 { font-family: var(--serif); font-weight: 600; line-height: 1.04; co
 .f-social a { width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,.07); display: grid; place-items: center; color: #fff; transition: .3s var(--ease); }
 .f-social a:hover { background: var(--amber); color: var(--black); transform: translateY(-3px); }
 .f-social svg { width: 19px; height: 19px; }
-.footer-bottom { margin-top: 56px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; }
+.footer-bottom { margin-top: 34px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; }
+.footer-seal { display: flex; justify-content: center; margin-top: 56px; }
+.footer-seal img { width: 122px; height: 122px; opacity: .92; transition: transform .8s var(--ease); }
+.footer-seal img:hover { transform: rotate(15deg) scale(1.05); }
 
 /* ---------- Reveal (only active when JS present; visible otherwise) ---------- */
 .js [data-anim] { opacity: 0; will-change: transform, opacity; }
