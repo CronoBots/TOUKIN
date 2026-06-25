@@ -145,7 +145,7 @@ h1,h2,h3,h4 { font-family: var(--serif); font-weight: 600; line-height: 1.04; co
   font-size: 30vw; line-height: 1; color: var(--black); opacity: .035; pointer-events: none; z-index: 0; letter-spacing: -.04em; }
 .hero-quarter { position: absolute; left: -120px; top: -120px; width: 360px; height: 360px; z-index: 0;
   background: var(--amber); border-radius: 0 0 100% 0; opacity: .12; }
-.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(30px,5vw,72px); align-items: center; width: 100%; }
+.hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(30px,5vw,72px); align-items: center; }
 .hero-kicker { display: inline-flex; align-items: center; gap: 12px; font-size: .78rem; font-weight: 800;
   letter-spacing: .2em; text-transform: uppercase; color: var(--amber-ink); margin-bottom: 26px; }
 .hero-kicker .ln { width: 40px; height: 2px; background: var(--amber); }
