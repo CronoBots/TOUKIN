@@ -526,9 +526,13 @@ body.menu-open { overflow: hidden; }
   transition: opacity .5s var(--ease), transform .5s var(--ease), visibility .5s, box-shadow .35s var(--ease); }
 .status-pill.show { opacity: 1; visibility: visible; transform: none; }
 .status-pill:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-/* fermé : translucide pour laisser voir le contenu derrière */
-.status-pill.closed { background: rgba(255,255,255,.32); backdrop-filter: blur(11px) saturate(1.3);
-  -webkit-backdrop-filter: blur(11px) saturate(1.3); border: 1px solid rgba(255,255,255,.5); box-shadow: 0 6px 22px rgba(28,27,26,.10); }
+/* fermé : totalement transparent (ne cache pas le contenu) + minimal */
+.status-pill.closed { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; border: none; box-shadow: none; padding: 8px 12px; }
+.status-pill.closed:hover { box-shadow: none; }
+.status-pill.closed .ssub { display: none; }
+.status-pill.closed .sstate { color: #D8473E; text-shadow: 0 1px 3px rgba(0,0,0,.25), 0 0 2px rgba(255,255,255,.55); }
+.status-pill.closed .sdot { box-shadow: 0 0 0 4px rgba(216,71,62,.16); }
+/* ouvert : plein blanc, bien visible avec le téléphone */
 .status-pill.open { background: var(--white); }
 .status-pill .sdot { width: 11px; height: 11px; border-radius: 50%; flex: 0 0 auto; position: relative; }
 .status-pill.open .sdot { background: #2BA55B; }
