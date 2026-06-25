@@ -200,6 +200,9 @@
     pill.innerHTML = '<span class="sdot"></span><span class="stxt"><b class="sstate"></b><span class="ssub"></span></span>';
     document.body.appendChild(pill);
     const state = pill.querySelector('.sstate'), sub = pill.querySelector('.ssub');
+    const bar = document.querySelector('.mobile-bar');
+    const barState = bar && bar.querySelector('.mb-state');
+    const barStatus = bar && bar.querySelector('.mb-status');
 
     const render = () => {
       const { day, cur } = now();
@@ -207,6 +210,7 @@
       const open = close !== null && cur >= OPEN && cur < close;
       pill.classList.toggle('open', open);
       pill.classList.toggle('closed', !open);
+      let when = '';
       if (open) {
         pill.href = 'tel:' + TEL;
         pill.setAttribute('aria-label', 'Centre ouvert — appeler le ' + TELDISP);
@@ -216,7 +220,7 @@
         let target = { d: 1, ahead: 1 };
         if (close !== null && cur < OPEN) target = { d: day, ahead: 0 };
         else for (let i = 1; i <= 7; i++) { const d = (day + i) % 7; if (closeFor(d) !== null) { target = { d, ahead: i }; break; } }
-        const when = target.ahead === 0 ? "aujourd'hui à " + fmt(OPEN)
+        when = target.ahead === 0 ? "aujourd'hui à " + fmt(OPEN)
           : target.ahead === 1 ? 'demain à ' + fmt(OPEN)
           : days[target.d] + ' à ' + fmt(OPEN);
         pill.href = '#contact';
@@ -224,11 +228,42 @@
         state.textContent = 'Fermé';
         sub.textContent = 'Ouvre ' + when;
       }
+      if (bar) {
+        bar.classList.toggle('open', open);
+        bar.classList.toggle('closed', !open);
+        barState.textContent = open ? 'Ouvert' : 'Fermé';
+        barStatus.setAttribute('aria-label', open ? ('Centre ouvert, ferme à ' + fmt(close)) : ('Centre fermé, ouvre ' + when));
+      }
     };
 
     render();
     setTimeout(() => pill.classList.add('show'), 700);
     setInterval(render, 60000);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) render(); });
+  });
+
+  /* ---- Lightbox galerie (clic / Entrée pour agrandir) ---- */
+  safe(() => {
+    const items = $$('.gallery .g-item');
+    if (!items.length) return;
+    const lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.setAttribute('aria-hidden', 'true');
+    lb.innerHTML = '<button class="lb-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6 6 18" stroke-linecap="round"/></svg></button><figure><img alt=""><figcaption></figcaption></figure>';
+    document.body.appendChild(lb);
+    const lbImg = lb.querySelector('img'), lbCap = lb.querySelector('figcaption');
+    const openLb = (src, alt, cap) => { lbImg.src = src; lbImg.alt = alt || ''; lbCap.textContent = cap || ''; lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; };
+    const closeLb = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; };
+    items.forEach(it => {
+      const img = it.querySelector('img'); if (!img) return;
+      const cap = it.querySelector('figcaption');
+      it.setAttribute('tabindex', '0'); it.setAttribute('role', 'button');
+      it.setAttribute('aria-label', 'Agrandir : ' + (cap ? cap.textContent : (img.alt || 'photo')));
+      const go = () => openLb(img.currentSrc || img.src, img.alt, cap ? cap.textContent : '');
+      it.addEventListener('click', go);
+      it.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+    lb.addEventListener('click', (e) => { if (e.target === lb || e.target.closest('.lb-close')) closeLb(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
   });
 })();

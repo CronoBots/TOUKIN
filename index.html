@@ -13,7 +13,18 @@
   <meta property="og:title" content="Toukin — Collectif santé · Tolochenaz" />
   <meta property="og:description" content="Centre pluridisciplinaire dédié au mouvement : physiothérapie, ostéopathie, préparation physique et cours collectifs à Tolochenaz (VD)." />
   <meta property="og:locale" content="fr_CH" />
-  <meta property="og:image" content="assets/emblem.svg" />
+  <meta property="og:url" content="https://cronobots.github.io/TOUKIN/" />
+  <meta property="og:site_name" content="Toukin — Collectif santé" />
+  <meta property="og:image" content="https://cronobots.github.io/TOUKIN/assets/photos/cabinet/cab-1.jpg" />
+  <meta property="og:image:alt" content="Centre de physiothérapie Toukin à Tolochenaz" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Toukin — Collectif santé · Physiothérapie à Tolochenaz" />
+  <meta name="twitter:description" content="Physiothérapie, ostéopathie et préparation physique à Tolochenaz (VD). Réservation en ligne, avec ou sans ordonnance." />
+  <meta name="twitter:image" content="https://cronobots.github.io/TOUKIN/assets/photos/cabinet/cab-1.jpg" />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://cronobots.github.io/TOUKIN/" />
 
   <link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -124,7 +135,7 @@
       <div class="hero-visual" data-anim="scale" data-delay="2">
         <img class="hero-stamp" src="assets/emblem.svg" alt="" aria-hidden="true" />
         <div class="hero-photo main">
-          <img src="assets/photos/cabinet/cab-1.jpg" alt="Salle de soin et de consultation du centre Toukin" loading="eager"
+          <img src="assets/photos/cabinet/cab-1.jpg" alt="Salle de soin et de consultation du centre Toukin" loading="eager" fetchpriority="high" decoding="async"
                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80'" />
         </div>
         <div class="hero-photo inset">
@@ -646,6 +657,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- Barre d'action mobile : statut live + appeler + réserver -->
+  <div class="mobile-bar" role="region" aria-label="Réserver ou appeler le centre">
+    <a class="mb-status" href="#contact" aria-label="Voir les horaires"><span class="mb-dot"></span><span class="mb-state">Horaires</span></a>
+    <a class="mb-call" href="tel:+41782401395" aria-label="Appeler le centre">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a class="mb-book" href="https://www.tbooking.ch/fr/book/4003-4745" target="_blank" rel="noopener"><span>Réserver</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
 
   <button class="to-top" aria-label="Remonter en haut de la page">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
